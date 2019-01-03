@@ -1,0 +1,4 @@
+kubernetes
+request
+flask
+flask_wtf
