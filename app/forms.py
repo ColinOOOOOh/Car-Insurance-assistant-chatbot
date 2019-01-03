@@ -3,6 +3,8 @@ from wtforms import StringField,PasswordField,BooleanField,SubmitField,TextAreaF
 
 from wtforms.validators import DataRequired
 
+
+
 class LoginForm(FlaskForm):
     image = StringField('image',validators=[DataRequired(message='please input image')])
     app = StringField('app',validators=[DataRequired(message='please input app name')])
