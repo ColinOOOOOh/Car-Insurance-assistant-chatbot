@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired
 
 
 class LoginForm(FlaskForm):
-    image = StringField('image',validators=[DataRequired(message='please input image')])
+    # image = RadioField('image',validators=[DataRequired(message='please input image')])
     app = StringField('app',validators=[DataRequired(message='please input app name')])
     command = StringField('command', validators=[DataRequired(message='please input command')])
     env = StringField('environment', validators=[DataRequired(message='please input environment')])

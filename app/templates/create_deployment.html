@@ -3,12 +3,10 @@
 <h1>create</h1>
     <form action="create_deployment" method="post">
         {{ form.hidden_tag() }}
-        <p>
-            {{ form.image.label }}<br>
-            {{ form.image(size=32) }}<br>
-            {% for error in form.image.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
+        <p>select an image
+        {% for post in ima %}
+            <p><input type="radio" name="image" value={{post.name}} />{{post.name}}    {{post.version}}</p>
+        {% endfor %}
 
         </p>
         <p>
@@ -60,11 +58,13 @@
         <label><input type="radio" checked="checked" name="cm" value="no"/>不挂载configmap</label>
 
         {% for post in posts %}
-            <label><input type="radio" name="cm" value={{ post.metadata.name }} />{{ post.metadata.name }}</label>
+        <label><p><input type="radio" name="cm" value={{ post.metadata.name }} />{{ post.metadata.name }}</p></label>
         {% endfor %}
 
 
 
         <p>{{ form.submit() }}</p>
+
+
     </form>
 {% endblock %}

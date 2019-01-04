@@ -3,6 +3,8 @@ from flask import render_template,request
 from kubernetes import client, config
 from app.forms import LoginForm,replicationcontrollerForm,configmapForm
 import os
+import requests
+import json
 # DEPLOYMENT_NAME = "kubectl-client-test"
 
 
@@ -41,11 +43,13 @@ def create_deployment():
 
     if form.validate_on_submit():
         radio = request.values.get("cm")
+        image = request.values.get("image")
+        print(image)
         print(radio)
 
         if  radio=='no':
             app = form.app.data
-            image = form.image.data
+            # image = image
             env = form.env.data
             command = form.command.data
             container_name = app
@@ -119,7 +123,7 @@ def create_deployment():
             return '%s ' % str(api_response.status)
         else:
             app = form.app.data
-            image = form.image.data
+            # image = form.image.data
             env = form.env.data
             command = form.command.data
             container_name = app
@@ -205,13 +209,24 @@ def create_deployment():
 
             return '%s ' % str(api_response.status)
 
+    payload = {"action": "coreui_Search", "method": "read",
+               "data": [{"page": 1, "start": 0, "limit": 500, "filter": [{"property": "format", "value": "docker"}]}],
+               "type": "rpc", "tid": 21}
+
+    url = 'http://nexus.ahi.internal:8081/service/extdirect'
+    r = requests.post(url, json=payload)
+
+    c = json.loads(r.text)
+    inf = c['result']['data']
+
+
 
     user = {'username': 'yinzi'}
     config.load_kube_config()
     v1 = client.CoreV1Api()
     ret = v1.list_namespaced_config_map(namespace='default', watch=False)
-
-    return render_template('create_deployment.html',user=user,form=form,posts =ret.items)
+    # print(ret.items)
+    return render_template('create_deployment.html',user=user,form=form,posts =ret.items,ima=inf)
 
 @app.route('/configmap',methods=['GET','POST'])
 def configmap():
