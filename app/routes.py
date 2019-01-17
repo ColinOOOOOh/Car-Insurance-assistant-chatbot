@@ -2,10 +2,10 @@ from app import app
 from flask import render_template,request
 from kubernetes import client, config
 from app.forms import LoginForm,replicationcontrollerForm,configmapForm
-import os
-import requests
+from io import BytesIO
+import pycurl
 import json
-# DEPLOYMENT_NAME = "kubectl-client-test"
+
 
 
 @app.route('/')
@@ -43,7 +43,10 @@ def create_deployment():
 
     if form.validate_on_submit():
         radio = request.values.get("cm")
-        image = request.values.get("image")
+        image_tag = request.values.get("image")
+        version = request.values.get("version")
+        image = image_tag+':'+version
+
         print(image)
         print(radio)
 
@@ -59,6 +62,8 @@ def create_deployment():
             container = client.V1Container(
                 name=container_name,
                 image=image,
+                # command=["/bin/sh"],
+                # args=["-c",command],
                 ports=[client.V1ContainerPort(container_port=int(port))]
             )
 
@@ -123,7 +128,6 @@ def create_deployment():
             return '%s ' % str(api_response.status)
         else:
             app = form.app.data
-            # image = form.image.data
             env = form.env.data
             command = form.command.data
             container_name = app
@@ -139,6 +143,8 @@ def create_deployment():
             )
 
             container = client.V1Container(
+                # command=["/bin/sh"],
+                # args=["-c",command],
                 name=container_name,
                 image=image,
                 volume_mounts=[client.V1VolumeMount(
@@ -213,20 +219,62 @@ def create_deployment():
                "data": [{"page": 1, "start": 0, "limit": 500, "filter": [{"property": "format", "value": "docker"}]}],
                "type": "rpc", "tid": 21}
 
-    url = 'http://nexus.ahi.internal:8081/service/extdirect'
-    r = requests.post(url, json=payload)
+    # url = 'http://nexus.ahi.internal:8081/service/extdirect'
+    # r = requests.post(url, json=payload)
+    #
+    # c = json.loads(r.text)
+    # inf = c['result']['data']
+    # image_list = []
+    # for i in inf:
+    #     string = i["name"]+':'+i["version"]
+    #     image_list.append(string)
+    # print(image_list)
 
-    c = json.loads(r.text)
-    inf = c['result']['data']
+    b = BytesIO()
+    c = pycurl.Curl()
+    c.setopt(c.URL, 'http://nexus.ahi.internal:5000/v2/_catalog')
+    c.setopt(pycurl.WRITEDATA, b)
+    c.perform()
+    string_body = b.getvalue().decode('utf-8')
+    # print(string_body)
+    sb = eval(string_body)
+    c.close()
+    b.close()
+    image_list = []
+    # url_list = []
+    for i in sb["repositories"]:
+        url = 'http://nexus.ahi.internal:5000/v2/' + i + '/tags/list'
+        # image_list.append(i)
+        b = BytesIO()
+        c = pycurl.Curl()
+        c.setopt(pycurl.URL, url)
+        c.setopt(pycurl.WRITEDATA, b)
 
-
-
+        m = pycurl.CurlMulti()
+        m.add_handle(c)
+        while 1:
+            ret, num_handles = m.perform()
+            if ret != pycurl.E_CALL_MULTI_PERFORM: break
+        while num_handles:
+            if ret == -1:  continue
+            while 1:
+                ret, num_handles = m.perform()
+                if ret != pycurl.E_CALL_MULTI_PERFORM: break
+        string_body = b.getvalue().decode('utf-8')
+        sc = eval(string_body)
+        c.close()
+        b.close()
+        image_list.append(sc)
+        # for j in sc["tags"]:
+        #     image = sc["name"] + ':' + j
+        #     image_list.append(image)
+    for i in image_list:
+        print(i)
     user = {'username': 'yinzi'}
     config.load_kube_config()
     v1 = client.CoreV1Api()
     ret = v1.list_namespaced_config_map(namespace='default', watch=False)
-    # print(ret.items)
-    return render_template('create_deployment.html',user=user,form=form,posts =ret.items,ima=inf)
+    return render_template('create_deployment.html',user=user,form=form,posts =ret.items,ima=image_list)
 
 @app.route('/configmap',methods=['GET','POST'])
 def configmap():
@@ -259,4 +307,29 @@ def configmap():
 
     return render_template('configmap.html',form = form)
 
+
+@app.route('/list_cm',methods=['GET','POST'])
+def list_cm():
+    user = {'username':'yinzi'}
+    config.load_kube_config()
+    v1 = client.CoreV1Api()
+    print("Listing cm with their:")
+    ret1 = v1.list_namespaced_config_map(namespace='default',watch=False)
+    for i in ret1.items:
+        # print(i.metadata.name)
+        ret2 = v1.read_namespaced_config_map(namespace='default',name=i.metadata.name,pretty=True)
+    # print(ret1)
+        print(ret2)
+
+    return render_template('list_cm.html',title='configmap info',user=user,posts=ret1.items)
+
+@app.route('/list_cm/<cm>',methods=['GET'])
+def list_edit_cm(cm):
+    form = configmapForm()
+    config.load_kube_config()
+    v1 = client.CoreV1Api()
+    ret = v1.read_namespaced_config_map(namespace='default',name=cm,pretty=True)
+    print(ret)
+
+    return render_template('list_edit_cm.html',title=cm,posts=ret,form=form)
 

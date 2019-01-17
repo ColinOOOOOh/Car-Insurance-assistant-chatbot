@@ -34,3 +34,6 @@ class configmapForm(FlaskForm):
     submit = SubmitField('Create')
 
 
+class configmap_edit(FlaskForm):
+    submit = SubmitField('Save')
+

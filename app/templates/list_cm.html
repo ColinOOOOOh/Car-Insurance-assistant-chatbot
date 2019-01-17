@@ -1,0 +1,36 @@
+<a href="{{ url_for('catalog')}}">index</a>
+
+{% block content %}
+    <p>kubernetes configmap</p>
+        {% for post in posts %}
+
+                <div style="float:left;">
+                <a href="{{ url_for('list_cm')}}" action="" methods="post" value={{ post.metadata.name }} >
+                    {{ post.metadata.name }}
+                </a>
+                </div>
+
+                <div style="margin-left:10px;">
+                    <a href="{{ url_for('list_edit_cm',cm=post.metadata.name)}}" action="" methods="post">
+                        edit
+                    </a>
+                </div>
+
+                <!--<div>-->
+                    <!--{% for i in post.data %}-->
+                        <!--<a>{{i}}:{{post.data[i]}}</a>-->
+                        <!--<br>-->
+                    <!--{% endfor %}-->
+                <!--</div>-->
+
+
+        {% endfor %}
+
+
+{% endblock %}
+<script type="text/javascript">
+    function addBotton(){
+        var cont = document.getElementById("edit")
+        edit.setAttribute("type","TextArea")
+    }
+</script>
