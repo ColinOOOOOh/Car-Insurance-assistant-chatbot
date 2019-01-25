@@ -4,33 +4,27 @@
     <p>kubernetes configmap</p>
         {% for post in posts %}
 
-                <div style="float:left;">
+                <div style="float:left;display:inline-block;width=200px;">
                 <a href="{{ url_for('list_cm')}}" action="" methods="post" value={{ post.metadata.name }} >
                     {{ post.metadata.name }}
                 </a>
                 </div>
 
-                <div style="margin-left:10px;">
+                <div style="float:left;width=200px;margin-left:100px;">
                     <a href="{{ url_for('list_edit_cm',cm=post.metadata.name)}}" action="" methods="post">
                         edit
                     </a>
                 </div>
 
-                <!--<div>-->
-                    <!--{% for i in post.data %}-->
-                        <!--<a>{{i}}:{{post.data[i]}}</a>-->
-                        <!--<br>-->
-                    <!--{% endfor %}-->
-                <!--</div>-->
+                <div style="width=200px;margin-left:300px;">
+                    <a href="{{ url_for('delete_cm',cm=post.metadata.name)}}" action="" name="delete_cm" methods="post" value={{ post.metadata.name }}>
+                        delete
+                    </a>
+                </div>
+
 
 
         {% endfor %}
 
 
 {% endblock %}
-<script type="text/javascript">
-    function addBotton(){
-        var cont = document.getElementById("edit")
-        edit.setAttribute("type","TextArea")
-    }
-</script>

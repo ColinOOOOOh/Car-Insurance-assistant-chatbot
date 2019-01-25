@@ -8,8 +8,8 @@ from wtforms.validators import DataRequired
 class LoginForm(FlaskForm):
     # image = RadioField('image',validators=[DataRequired(message='please input image')])
     app = StringField('app',validators=[DataRequired(message='please input app name')])
-    command = StringField('command', validators=[DataRequired(message='please input command')])
-    env = StringField('environment', validators=[DataRequired(message='please input environment')])
+    command = StringField('command')
+    env = StringField('environment')
     port = StringField('port',validators=[DataRequired(message='please input port')])
     targetport = StringField('target port',validators=[DataRequired(message='please input target port')])
     path = StringField('volumemount path')
@@ -34,6 +34,8 @@ class configmapForm(FlaskForm):
     submit = SubmitField('Create')
 
 
-class configmap_edit(FlaskForm):
+class configmap_edit_Form(FlaskForm):
+
+    # cm_inf=TextAreaField('cm_inf',validators=[DataRequired(message='please input content')])
     submit = SubmitField('Save')
 

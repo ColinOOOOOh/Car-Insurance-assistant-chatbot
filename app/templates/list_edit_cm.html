@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html >
 <head>
     <meta charset="UTF-8">
      {% if title %}
@@ -8,26 +6,29 @@
         <title>log</title>
         {% endif %}
 </head>
+<div>{{title}}
+    <a href="{{ url_for('catalog')}}">index</a>
+</div>
+
+
+
 
 <form action="list_edit_cm" method="post">
-    <br>
-       <div>{{title}} : cm
-           <a href="{{ url_for('catalog')}}">index</a>
-       </div>
-       <br> </br>
-<div>
+    {{ form.hidden_tag() }}
+
     <text>
         <pre>
-            <textarea style='height:400px;width:800px'>{{ posts }}</textarea>
+            <input name="cm" value={{title}} />
+            <!--<textarea style='height:400px;width:800px' name="cm_inf">{% for i in posts.data %}{{i}}:{{posts.data[i]}}{% endfor %}</textarea>-->
+            <!--<textarea style="height:400px;width:800px" name="cm_inf"></textarea>-->
+            {% for i in posts.data %}
+            <input name="cm_name" type="text" value={{i}}>
+            <textarea name="cm_inf" style="height:400px;width:800px">{{posts.data[i]}}</textarea>
+            {% endfor %}
         </pre>
-
     </text>
-
-</div>
 
     <p>{{ form.submit() }}</p>
 
 </form>
 
-
-</html>

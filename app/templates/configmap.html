@@ -1,7 +1,31 @@
 <a href="{{ url_for('catalog')}}">index</a>
+<br>
 {% block content %}
+        {% for post in posts %}
+
+                <div style="float:left;display:inline-block;width=200px;">
+                <a href="{{ url_for('list_cm')}}" action="" methods="get" value={{ post.metadata.name }} >
+                    {{ post.metadata.name }}
+                </a>
+                </div>
+
+                <div style="float:left;width=200px;margin-left:100px;">
+                    <a href="{{ url_for('list_edit_cm',cm=post.metadata.name)}}" action="" methods="post">
+                        edit
+                    </a>
+                </div>
+
+                <div style="width=200px;margin-left:300px;">
+                    <a href="{{ url_for('delete_cm')}}" action="" methods="post" name="delete_cm" value={{ post.metadata.name }}>
+                        delete
+                    </a>
+                </div>
+
+
+
+        {% endfor %}
 <h1>create</h1>
-    <form action="configmap" method="post" id="form_id">
+    <form action="" method="post" id="form_id">
         {{ form.hidden_tag() }}
 
         <p>{{ form.submit() }}</p>
@@ -15,21 +39,16 @@
         <textarea name="configtxt" style="height: 400px;width: 800px"></textarea>
         </p>
 
-
-
-
-
-
-
     </form>
 
-{% endblock %}
 
-<input type="button" value="添加" />
+{% endblock %}
+<input type="button" value="添加" onclick="addButton()"/>
+
 <script type="text/javascript">
     var i = 2;
     var cont = document.getElementById("form_id")
-    function addBotton(){
+    function addButton(){
         var p1 = document.createElement("p");
         var txt1 = document.createTextNode("doc name " + i + " ");
         p1.appendChild(txt1);
@@ -37,7 +56,6 @@
         Newname.setAttribute("size",20);
         Newname.setAttribute("type","text");
         Newname.setAttribute("name","configname");
-
         var p2 = document.createElement("p");
         var txt2 = document.createTextNode("content " + i + " ");
         p2.appendChild(txt2);
@@ -45,11 +63,11 @@
         NewInput.setAttribute('style', 'height: 400px;width: 800px');
         NewInput.setAttribute("type","text");
         NewInput.setAttribute("name","configtxt");
-
         p1.appendChild(Newname);
         p2.appendChild(NewInput);
         cont.appendChild(p1);
         cont.appendChild(p2);
         i++;
     }
+
 </script>
