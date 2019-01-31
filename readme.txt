@@ -58,5 +58,8 @@ Python version: 3.6.4
     12: deploy_part():
         创建 deployment 的公共组件，包含selector, metadata, body，并完成deployment创建。
 
+未测试部分：
+    创建带有command和env的deployment时，由于使用的时本地自建的景象，不能确定实际测试是否还需要改动。
+
 
 
