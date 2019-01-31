@@ -19,8 +19,6 @@
     <text>
         <pre>
             <input name="cm" value={{title}} />
-            <!--<textarea style='height:400px;width:800px' name="cm_inf">{% for i in posts.data %}{{i}}:{{posts.data[i]}}{% endfor %}</textarea>-->
-            <!--<textarea style="height:400px;width:800px" name="cm_inf"></textarea>-->
             {% for i in posts.data %}
             <input name="cm_name" type="text" value={{i}}>
             <textarea name="cm_inf" style="height:400px;width:800px">{{posts.data[i]}}</textarea>

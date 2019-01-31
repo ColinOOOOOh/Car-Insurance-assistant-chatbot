@@ -2,9 +2,9 @@
 <br>
 {% block content %}
         {% for post in posts %}
-
+        <div>
                 <div style="float:left;display:inline-block;width=200px;">
-                <a href="{{ url_for('list_cm')}}" action="" methods="get" value={{ post.metadata.name }} >
+                <a>
                     {{ post.metadata.name }}
                 </a>
                 </div>
@@ -16,14 +16,13 @@
                 </div>
 
                 <div style="width=200px;margin-left:300px;">
-                    <a href="{{ url_for('delete_cm')}}" action="" methods="post" name="delete_cm" value={{ post.metadata.name }}>
+                    <a href="{{ url_for('delete_cm',cm=post.metadata.name)}}">
                         delete
                     </a>
                 </div>
-
-
-
+        </div>
         {% endfor %}
+
 <h1>create</h1>
     <form action="" method="post" id="form_id">
         {{ form.hidden_tag() }}
