@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <script type="text/javascript" src="angular-1.7.8/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/profile.css"/>
+</head>
+<body>
+<div id="profile_frame" ng-app="profile" ng-controller="profile_controller">
+    <b>Profile</b>
+    <div id="edit_valid_div" style="display: none; color: red">
+        <span>The requirements for editing cannot meet.</span>
+    </div>
+    <form method="post">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+            <tr>
+                <table>
+                    <tbody>
+                    <tr>
+                        <img class="img" id="icon" ng-click="change_icon()" src="picture/me.PNG"/>
+                    </tr>
+                    <tr>
+                        <th align="right">
+                            <input align="center" type="file" id="icon_frame" style="display: none; width: 160px" name="upload_img"/>
+                        </th>
+                        <td colspan="1" align="left">
+                            <input type="button" ng-click="change()" value="change" id="make" style="display: none"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="267" align="right">User Name:</th>
+                        <td colspan="2" align="left"><input type="text" ng-model="username" name="username"/></td>
+                    </tr>
+                    <tr>
+                        <th width="267" align="right">Email:</th>
+                        <td colspan="2" align="left">
+                            <input type="text" ng-model="email" ng-blur="email_valid()" name="email"/>
+                        </td>
+                        <td>
+                            <div style="display: none" id="valid_email">Email is not valid.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="267" align="right">Mobile Number:</th>
+                        <td colspan="2" align="left"><input type="tel" ng-model="mobilenumber" ng-blur="mobilenumber_valid()" name="mobilenumber"/></td>
+                        <td>
+                            <div style="display: none" id="valid_mobilenumber">Mobile number is not valid.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="267" align="right">Gender:</th>
+                        <td colspan="2" align="left">
+                            <input type="radio" ng-model="gender" name="gender"/>Male
+                            <input type="radio" ng-model="gender" name="gender"/>Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="267" align="right">Birthday:</th>
+                        <td colspan="2" align="left"><input type="date" ng-model="birthday" name="birthday"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="button" ng-click="edit()" value="Edit"/>
+                    <input type="button" ng-click="reset()" value="Reset"/>
+                    <input type="button" ng-click="transfer()" value="Cancel"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+</html>
+<script src="js/profile.js"></script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog</title>
+    <script type="text/javascript" src="static/angular-1.7.8/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/dialogue.css"/>
+</head>
+<body>
+<div ng-app="dialog" ng-controller="dialog_controller">
+    <table id="dialog_frame">
+        <tbody>
+        <tr>
+            <td>
+                <div id="frame">
+                    <b>Chatbot</b>
+                    <table align="center">
+                        <tr>
+                            <td>
+                                <div id="container">
+                                    <div id="content">
+                                        <div id="scroll">
+                                            <ul id="save"></ul>
+                                        </div>
+                                    </div>
+                                    <div id="edit">
+                                        <img src="static/picture/me.PNG" id="Img"/>
+                                        <input type="text" name="input" ng-model="requestMsg" title="Please input content." style="border-radius: 5px" id="txt"/>
+                                        <input type="button" name="send" ng-click="send_msg()" value="Send" id="btn"/>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <img id="ad_frame" src="static/picture/Sydney.jpg"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="static/js/dialog.js"></script>
+</body>
+</html>
