@@ -9,7 +9,8 @@
 <body>
     <div id="login_frame" ng-app="loginApp" ng-controller="login_controller">
         <b>Chatbot</b><br>
-        <form method="post">
+        <form method="post" action="/login">
+
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tbody>
                     <tr>
@@ -17,7 +18,7 @@
                             <tbody>
                             <tr>
                                 <th width="267" align="right">UserID:</th>
-                                <td colspan="2" align="left"><input type="text" ng-model="username" id="username" name="User" style="margin-left: 10px"/></td>
+                                <td colspan="2" align="left"><input type="text" ng-model="username" id="username" name="username" style="margin-left: 10px"/></td>
                             </tr>
                             <tr>
                                 <th width="267" align="right">Password:</th>
@@ -28,8 +29,10 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <input type="submit" width="100%" value="Login"/>
-                            <input type="button" width="100%" onclick="jumpToRegister()" value="Register"/>
+
+                            <input type="submit" width="100%" value="Login" name="Submit"/>
+
+                            <input type="button" width="100%" onclick='location.href=("register")' value="Register"/>
                             <input type="button" width="100%" ng-click="reset()" value="Reset"/>
                         </td>
                     </tr>
@@ -41,3 +44,6 @@
 <script type="text/javascript" src="static/js/login.js">
 </script>
 </html>
+
+
+<!--onclick="jumpToRegister()"-->

@@ -10,11 +10,12 @@ class registerForm(FlaskForm):
     submit = SubmitField()
 
 class loginform(FlaskForm):
-    username = StringField('User')
-    passwd = StringField('password')
+    username = StringField('username',validators=[DataRequired()])
+    password = StringField('password',validators=[DataRequired()])
+
     # env = StringField('environment')
     # port = StringField('port',validators=[DataRequired(message='please input port')])
     # targetport = StringField('target port',validators=[DataRequired(message='please input target port')])
     # path = StringField('volumemount path')
 
-    submit = SubmitField('Login')
+    submit = SubmitField('Submit')

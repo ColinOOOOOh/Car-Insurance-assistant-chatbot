@@ -33,7 +33,7 @@ angular.module('dialog', [])
 
             $http({
                 method: 'POST',
-                url: 'https://fba5b7a2-2283-4909-a637-6facc546d041.mock.pstmn.io/send_msg',
+                url: 'answer_question',
                 data: data
             }).then(function (response) {
                 var res_data = response.data.response;

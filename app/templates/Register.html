@@ -13,7 +13,7 @@
         <div id="register_valid_div" style="display: none; color: red">
             <span>The requirements for registering cannot meet.</span>
         </div>
-        <form method="post">
+        <form method="post" action="/register">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tbody>
                     <tr>
@@ -74,9 +74,9 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <input type="button" ng-click="register()" value="Register"/>
+                            <input type="Submit" ng-click="register()" value="Register" name="Submit"/>
                             <input type="button" ng-click="reset()" value="Reset"/>
-                            <input type="button" ng-click="return()" value="Cancel"/>
+                            <input type="button" onclick='location.href=("login")' value="Cancel"/>
                         </td>
                     </tr>
                 </tbody>

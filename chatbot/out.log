@@ -1,0 +1,1474 @@
+2019-11-04 00:38:35,686 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-04 00:38:38,726 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-04 00:38:53,168 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-04 00:38:54,755 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-04 00:38:54,756 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-04 00:39:04,604 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-04 00:41:41,582 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:18:43,183 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-09 05:18:46,223 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-09 05:19:00,820 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-09 05:19:02,408 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-09 05:19:02,409 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-09 05:19:26,458 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:19:40,379 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:21:08,848 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-09 05:21:11,899 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-09 05:21:26,340 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-09 05:21:27,904 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-09 05:21:27,905 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-09 05:21:35,617 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:23:22,201 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-09 05:23:25,208 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-09 05:23:39,913 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-09 05:23:41,490 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-09 05:23:41,490 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-09 05:23:52,201 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:33:45,418 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-09 05:33:48,467 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-09 05:34:03,071 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-09 05:34:04,648 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-09 05:34:04,648 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-09 05:34:11,006 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:34:11,180 [ERROR]  Failed to run custom action 'action_query_knowledge_base'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2019-11-09 05:34:11,180 [ERROR]  Encountered an exception while running action 'action_query_knowledge_base'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-11-09 05:34:26,393 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:34:31,938 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:34:47,316 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:34:47,322 [ERROR]  Failed to run custom action 'action_query_knowledge_base'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2019-11-09 05:34:47,323 [ERROR]  Encountered an exception while running action 'action_query_knowledge_base'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-11-09 05:35:36,025 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:35:36,031 [ERROR]  Failed to run custom action 'action_query_knowledge_base'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2019-11-09 05:35:36,031 [ERROR]  Encountered an exception while running action 'action_query_knowledge_base'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-11-09 05:35:50,973 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:36:09,306 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:36:09,312 [ERROR]  Failed to run custom action 'action_query_knowledge_base'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2019-11-09 05:36:09,312 [ERROR]  Encountered an exception while running action 'action_query_knowledge_base'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-11-09 05:36:18,313 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 05:36:18,320 [ERROR]  Failed to run custom action 'action_query_knowledge_base'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2019-11-09 05:36:18,320 [ERROR]  Encountered an exception while running action 'action_query_knowledge_base'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-11-09 06:05:22,212 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-09 06:05:25,236 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-09 06:05:39,785 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-09 06:05:41,373 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-09 06:05:41,373 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-09 06:05:44,097 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 06:05:54,807 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 06:05:54,819 [ERROR]  Failed to run custom action 'action_query_knowledge_base'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2019-11-09 06:05:54,819 [ERROR]  Encountered an exception while running action 'action_query_knowledge_base'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-11-09 06:06:31,140 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-09 06:06:31,146 [ERROR]  Failed to run custom action 'action_query_knowledge_base'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2019-11-09 06:06:31,146 [ERROR]  Encountered an exception while running action 'action_query_knowledge_base'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-11-10 01:26:36,336 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-10 01:26:39,373 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-10 01:26:54,142 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-10 01:26:55,744 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-10 01:26:55,745 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-10 01:46:02,926 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:46:27,035 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:47:03,611 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:47:11,787 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:47:41,348 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:49:08,582 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:51:14,866 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-10 01:51:17,927 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-10 01:51:32,641 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-10 01:51:34,234 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-10 01:51:34,234 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-10 01:55:05,510 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:55:42,459 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:56:17,323 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:56:26,234 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 01:56:44,756 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 03:25:56,952 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 03:26:06,258 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 03:26:11,383 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 03:26:38,089 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 03:47:36,674 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-10 03:47:39,701 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-10 03:47:54,045 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-10 03:47:55,614 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-10 03:47:55,615 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-10 03:48:01,894 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 03:48:20,260 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 06:13:29,779 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-10 06:13:32,806 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-10 06:13:47,274 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-10 06:13:48,864 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-10 06:13:48,864 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-10 06:14:25,065 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 06:14:33,342 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 13:52:03,393 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-10 13:52:06,470 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-10 13:52:21,079 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-10 13:52:22,661 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-10 13:52:22,661 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-10 13:56:57,357 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 13:57:29,615 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 13:57:36,992 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 13:58:01,256 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 13:59:19,843 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 13:59:27,112 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 14:00:19,946 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 14:00:22,821 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 14:00:27,225 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 14:00:34,476 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 14:00:37,445 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 14:00:38,526 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 14:00:51,454 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-10 23:31:59,149 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-10 23:32:02,245 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-10 23:32:16,789 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-10 23:32:18,361 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-10 23:32:18,361 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-10 23:36:56,599 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-11 00:24:33,666 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-11 00:24:38,935 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-11 00:24:47,800 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-11 13:21:54,560 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-11 13:21:57,611 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-11 13:22:12,042 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-11 13:22:13,626 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-11 13:22:13,626 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-12 12:57:37,632 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-12 12:57:40,758 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-12 12:57:55,255 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-12 12:57:56,838 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-12 12:57:56,838 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-12 12:57:57,028 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-12 12:58:08,882 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-12 12:58:43,056 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-12 12:58:43,056 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-12 12:58:43,057 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-12 12:58:43,057 [INFO ]  Enabling coroutine debugging. Loop id 93967856153728.
+2019-11-12 12:58:43,063 [DEBUG]  Extracted model to '/tmp/tmpvf5yxzu4'.
+2019-11-12 12:58:46,132 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-12 12:59:00,439 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-12 12:59:00,479 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-12 12:59:00,479 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-12 12:59:00,485 [DEBUG]  Extracted model to '/tmp/tmp4ernrh66'.
+2019-11-12 12:59:00,486 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-12 12:59:02,054 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-12 12:59:02,054 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-12 12:59:12,463 [DEBUG]  Creating a new tracker for id 'zhu'.
+2019-11-12 12:59:12,477 [DEBUG]  Received user message 'list some car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9635304817443037}' and entities '[{'value': 'neu', 'confidence': 0.9818513344258509, 'entity': 'sentiment', 'extractor': 'sentiment_extractor'}]'
+2019-11-12 12:59:12,477 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-12 12:59:12,478 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-12 12:59:12,478 [DEBUG]  Logged UserUtterance - tracker now has 2 events
+2019-11-12 12:59:12,479 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_sentiment': 1.0}]
+2019-11-12 12:59:12,479 [DEBUG]  There is no memorised next action
+2019-11-12 12:59:12,480 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 12:59:12,638 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-12 12:59:12,638 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.47.
+2019-11-12 12:59:12,638 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-12 12:59:12,660 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Sorry, I\'m not sure I understand. Can you rephrase?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-12 12:59:12,660 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-12 12:59:12,661 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_sentiment': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_sentiment': 1.0}]
+2019-11-12 12:59:12,661 [DEBUG]  There is no memorised next action
+2019-11-12 12:59:12,661 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 12:59:12,662 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 12:59:12,665 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-12 12:59:12,665 [DEBUG]  Predicted next action 'action_listen' with confidence 0.95.
+2019-11-12 12:59:12,665 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-12 12:59:12,665 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-12 13:04:07,967 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-12 13:04:07,968 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-12 13:04:07,968 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-12 13:04:07,969 [INFO ]  Enabling coroutine debugging. Loop id 94360474277680.
+2019-11-12 13:04:07,975 [DEBUG]  Extracted model to '/tmp/tmpsjqwqsu0'.
+2019-11-12 13:04:11,014 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-12 13:04:26,448 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-12 13:04:26,487 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-12 13:04:26,488 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-12 13:04:26,494 [DEBUG]  Extracted model to '/tmp/tmp0ga2r23b'.
+2019-11-12 13:04:26,495 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-12 13:04:28,052 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-12 13:04:28,052 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-12 13:05:02,191 [DEBUG]  Creating a new tracker for id 'zhu'.
+2019-11-12 13:05:02,204 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9080092426907223}' and entities '[{'value': 'pos', 'confidence': 0.990839203023968, 'entity': 'sentiment', 'extractor': 'sentiment_extractor'}]'
+2019-11-12 13:05:02,204 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-12 13:05:02,205 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-12 13:05:02,205 [DEBUG]  Logged UserUtterance - tracker now has 2 events
+2019-11-12 13:05:02,206 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'entity_sentiment': 1.0, 'intent_greet': 1.0}]
+2019-11-12 13:05:02,206 [DEBUG]  There is no memorised next action
+2019-11-12 13:05:02,207 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:02,368 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-12 13:05:02,368 [DEBUG]  Predicted next action 'utter_greet' with confidence 0.50.
+2019-11-12 13:05:02,368 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hey!, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-12 13:05:02,369 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'entity_sentiment': 1.0, 'intent_greet': 1.0}, {'entity_sentiment': 1.0, 'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+2019-11-12 13:05:02,369 [DEBUG]  There is no memorised next action
+2019-11-12 13:05:02,370 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:02,370 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:02,373 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-12 13:05:02,373 [DEBUG]  Predicted next action 'action_listen' with confidence 0.97.
+2019-11-12 13:05:02,373 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-12 13:05:02,373 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-12 13:05:25,905 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-12 13:05:25,917 [DEBUG]  Received user message 'list some car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9635304817443037}' and entities '[{'value': 'neu', 'confidence': 0.9818513344258509, 'entity': 'sentiment', 'extractor': 'sentiment_extractor'}]'
+2019-11-12 13:05:25,917 [WARNI]  Interpreter parsed an entity 'sentiment' that is not defined in the domain.
+2019-11-12 13:05:25,917 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-12 13:05:25,917 [DEBUG]  Logged UserUtterance - tracker now has 6 events
+2019-11-12 13:05:25,918 [DEBUG]  Current tracker state [None, {}, {'prev_action_listen': 1.0, 'entity_sentiment': 1.0, 'intent_greet': 1.0}, {'entity_sentiment': 1.0, 'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_sentiment': 1.0}]
+2019-11-12 13:05:25,918 [DEBUG]  There is no memorised next action
+2019-11-12 13:05:25,919 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:25,919 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:25,919 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:25,922 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-12 13:05:25,922 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.64.
+2019-11-12 13:05:25,922 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-12 13:05:25,945 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Can you please rephrase? I did not got that., data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-12 13:05:25,945 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-12 13:05:25,946 [DEBUG]  Current tracker state [{}, {'prev_action_listen': 1.0, 'entity_sentiment': 1.0, 'intent_greet': 1.0}, {'entity_sentiment': 1.0, 'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_sentiment': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_sentiment': 1.0}]
+2019-11-12 13:05:25,946 [DEBUG]  There is no memorised next action
+2019-11-12 13:05:25,946 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:25,946 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:25,947 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:25,947 [DEBUG]  Feature 'entity_sentiment' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+2019-11-12 13:05:25,950 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-12 13:05:25,950 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2019-11-12 13:05:25,950 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-12 13:05:25,951 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-12 13:06:51,296 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-12 13:06:51,296 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-12 13:06:51,297 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-12 13:06:51,297 [INFO ]  Enabling coroutine debugging. Loop id 94079258032672.
+2019-11-12 13:06:51,303 [DEBUG]  Extracted model to '/tmp/tmp6ossh5dv'.
+2019-11-12 13:06:54,388 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-12 13:07:08,873 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-12 13:07:08,901 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-12 13:07:08,902 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-12 13:07:08,907 [DEBUG]  Extracted model to '/tmp/tmp3yzt4a8y'.
+2019-11-12 13:07:08,909 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-12 13:07:10,455 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-12 13:07:10,455 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-12 13:07:45,224 [DEBUG]  Creating a new tracker for id 'zhu'.
+2019-11-12 13:07:45,234 [DEBUG]  Received user message 'list some car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9715879562691074}' and entities '[{'start': 10, 'end': 23, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9264779845990078, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-12 13:07:45,235 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-12 13:07:45,235 [DEBUG]  Logged UserUtterance - tracker now has 3 events
+2019-11-12 13:07:45,235 [DEBUG]  Current tracker state [None, None, None, {}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}]
+2019-11-12 13:07:45,235 [DEBUG]  There is no memorised next action
+2019-11-12 13:07:45,393 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-12 13:07:45,393 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.59.
+2019-11-12 13:07:45,393 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-12 13:07:45,416 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [2, 0, 3, 1])']'
+2019-11-12 13:07:45,416 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [2, 0, 3, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-12 13:07:45,417 [DEBUG]  Current tracker state [None, None, {}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-12 13:07:45,417 [DEBUG]  There is no memorised next action
+2019-11-12 13:07:45,420 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-12 13:07:45,421 [DEBUG]  Predicted next action 'action_listen' with confidence 0.97.
+2019-11-12 13:07:45,421 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-12 13:07:45,421 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-12 22:00:44,458 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/sanic/server.py", line 273, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-11-15 03:40:35,013 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 03:40:38,070 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 03:40:52,606 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 03:40:54,223 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-15 03:40:54,223 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-15 03:41:16,954 [ERROR]  Failed to run custom action 'action_query_knowledge_base'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: Cannot connect to host localhost:5055 ssl:default [Connection refused]
+2019-11-15 03:41:16,955 [ERROR]  Encountered an exception while running action 'action_query_knowledge_base'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2019-11-15 03:45:29,894 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-15 03:45:29,894 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 03:45:29,895 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-15 03:45:29,896 [INFO ]  Enabling coroutine debugging. Loop id 94913753604304.
+2019-11-15 03:45:29,901 [DEBUG]  Extracted model to '/tmp/tmpiy3y5i8r'.
+2019-11-15 03:45:32,955 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 03:45:47,434 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 03:45:47,462 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-15 03:45:47,463 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-15 03:45:47,468 [DEBUG]  Extracted model to '/tmp/tmp5e_n94du'.
+2019-11-15 03:45:47,470 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-15 03:45:49,001 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-15 03:45:49,001 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-15 03:46:07,589 [DEBUG]  Creating a new tracker for id 'zhu'.
+2019-11-15 03:46:07,604 [DEBUG]  Received user message 'list some car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.974961991696806}' and entities '[{'start': 10, 'end': 23, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9264779845990078, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 03:46:07,604 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 03:46:07,604 [DEBUG]  Logged UserUtterance - tracker now has 3 events
+2019-11-15 03:46:07,605 [DEBUG]  Current tracker state [None, None, None, {}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 03:46:07,605 [DEBUG]  There is no memorised next action
+2019-11-15 03:46:07,768 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 03:46:07,768 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.58.
+2019-11-15 03:46:07,769 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 03:46:07,791 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [0, 2, 3, 1])']'
+2019-11-15 03:46:07,791 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [0, 2, 3, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 03:46:07,792 [DEBUG]  Current tracker state [None, None, {}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 03:46:07,792 [DEBUG]  There is no memorised next action
+2019-11-15 03:46:07,796 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 03:46:07,796 [DEBUG]  Predicted next action 'action_listen' with confidence 0.97.
+2019-11-15 03:46:07,796 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 03:46:07,796 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 05:36:22,841 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 05:36:22,850 [DEBUG]  Received user message 'list 5 year car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9646302533325193}' and entities '[{'start': 12, 'end': 25, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9279143429872703, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 05:36:22,851 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [0, 2, 3, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 05:36:22,851 [DEBUG]  Logged UserUtterance - tracker now has 18 events
+2019-11-15 05:36:22,851 [DEBUG]  Current tracker state [None, {}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 05:36:22,851 [DEBUG]  There is no memorised next action
+2019-11-15 05:36:22,855 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 05:36:22,855 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.79.
+2019-11-15 05:36:22,856 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 05:36:22,862 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [2, 0, 3, 1])']'
+2019-11-15 05:36:22,863 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [2, 0, 3, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 05:36:22,863 [DEBUG]  Current tracker state [{}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 05:36:22,863 [DEBUG]  There is no memorised next action
+2019-11-15 05:36:22,867 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 05:36:22,867 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2019-11-15 05:36:22,867 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 05:36:22,867 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 05:37:31,927 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 05:37:31,935 [DEBUG]  Inconsistent BILOU tagging found, B- tag, L- tag pair encloses multiple entity classes.i.e. [B-a, I-b, L-a] instead of [B-a, I-a, L-a].
+Assuming B- class is correct.
+2019-11-15 05:37:31,935 [DEBUG]  Inconsistent BILOU tagging found, B- tag not closed by L- tag, i.e [B-a, I-a, O] instead of [B-a, L-a, O].
+Assuming last tag is L-
+2019-11-15 05:37:31,935 [DEBUG]  Received user message 'list 5 years' with intent '{'name': 'query_knowledge_base', 'confidence': 0.8402226751398988}' and entities '[{'start': 5, 'end': 6, 'value': '5', 'entity': 'duration', 'confidence': 0.5410125186499839, 'extractor': 'CRFEntityExtractor'}]'
+2019-11-15 05:37:31,936 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [2, 0, 3, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 05:37:31,936 [DEBUG]  Logged UserUtterance - tracker now has 32 events
+2019-11-15 05:37:31,936 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'entity_duration': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 05:37:31,937 [DEBUG]  There is no memorised next action
+2019-11-15 05:37:31,940 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 05:37:31,941 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.78.
+2019-11-15 05:37:31,941 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 05:37:31,947 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [2, 0, 3, 1])']'
+2019-11-15 05:37:31,947 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [2, 0, 3, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 05:37:31,948 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'entity_duration': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'entity_duration': 1.0, 'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 05:37:31,948 [DEBUG]  There is no memorised next action
+2019-11-15 05:37:31,952 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 05:37:31,952 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2019-11-15 05:37:31,952 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 05:37:31,952 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 06:17:14,606 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-15 06:17:14,606 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 06:17:14,606 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-15 06:17:14,607 [INFO ]  Enabling coroutine debugging. Loop id 94772959784096.
+2019-11-15 06:17:14,613 [DEBUG]  Extracted model to '/tmp/tmp9gpwlq7b'.
+2019-11-15 06:17:17,678 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 06:17:32,042 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 06:17:32,077 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-15 06:17:32,078 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-15 06:17:32,083 [DEBUG]  Extracted model to '/tmp/tmpyuzfy40j'.
+2019-11-15 06:17:32,085 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-15 06:17:33,627 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-15 06:17:33,628 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-15 06:19:44,947 [DEBUG]  Creating a new tracker for id 'zhu'.
+2019-11-15 06:19:44,959 [DEBUG]  Inconsistent BILOU tagging found, B- tag, L- tag pair encloses multiple entity classes.i.e. [B-a, I-b, L-a] instead of [B-a, I-a, L-a].
+Assuming B- class is correct.
+2019-11-15 06:19:44,959 [DEBUG]  Inconsistent BILOU tagging found, B- tag not closed by L- tag, i.e [B-a, I-a, O] instead of [B-a, L-a, O].
+Assuming last tag is L-
+2019-11-15 06:19:44,960 [DEBUG]  Received user message 'list 5 years' with intent '{'name': 'query_knowledge_base', 'confidence': 0.8402226751398988}' and entities '[{'start': 5, 'end': 6, 'value': '5', 'entity': 'duration', 'confidence': 0.5410125186499839, 'extractor': 'CRFEntityExtractor'}]'
+2019-11-15 06:19:44,960 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-15 06:19:44,961 [DEBUG]  Logged UserUtterance - tracker now has 2 events
+2019-11-15 06:19:44,962 [DEBUG]  Current tracker state [None, None, None, {}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 06:19:44,962 [DEBUG]  There is no memorised next action
+2019-11-15 06:19:45,125 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:19:45,125 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.58.
+2019-11-15 06:19:45,126 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 06:19:45,149 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Sorry, I\'m not sure I understand. Can you rephrase?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-15 06:19:45,149 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-15 06:19:45,149 [DEBUG]  Current tracker state [None, None, {}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 06:19:45,149 [DEBUG]  There is no memorised next action
+2019-11-15 06:19:45,153 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:19:45,153 [DEBUG]  Predicted next action 'action_listen' with confidence 0.97.
+2019-11-15 06:19:45,154 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 06:19:45,154 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 06:19:53,099 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 06:19:53,107 [DEBUG]  Received user message '5 years' with intent '{'name': 'query_knowledge_base', 'confidence': 0.7209419788277618}' and entities '[]'
+2019-11-15 06:19:53,107 [DEBUG]  Logged UserUtterance - tracker now has 6 events
+2019-11-15 06:19:53,108 [DEBUG]  Current tracker state [None, {}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 06:19:53,108 [DEBUG]  There is no memorised next action
+2019-11-15 06:19:53,111 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:19:53,112 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.82.
+2019-11-15 06:19:53,112 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 06:19:53,118 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Can you please rephrase? I did not got that., data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-15 06:19:53,118 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-15 06:19:53,119 [DEBUG]  Current tracker state [{}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 06:19:53,119 [DEBUG]  There is no memorised next action
+2019-11-15 06:19:53,122 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:19:53,122 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2019-11-15 06:19:53,122 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 06:19:53,122 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 06:20:03,735 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 06:20:03,744 [DEBUG]  Received user message 'list 5 years car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9632752801553401}' and entities '[{'start': 5, 'end': 12, 'value': '5 years', 'entity': 'duration', 'confidence': 0.7891510868610166, 'extractor': 'CRFEntityExtractor'}, {'start': 13, 'end': 26, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.941667135443607, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 06:20:03,744 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:20:03,744 [DEBUG]  Logged UserUtterance - tracker now has 11 events
+2019-11-15 06:20:03,745 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 06:20:03,745 [DEBUG]  There is no memorised next action
+2019-11-15 06:20:03,749 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:20:03,749 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.73.
+2019-11-15 06:20:03,749 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 06:20:03,756 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [0, 3, 2, 1])']'
+2019-11-15 06:20:03,756 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [0, 3, 2, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:20:03,757 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'entity_object_type': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'entity_duration': 1.0, 'entity_object_type': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 06:20:03,757 [DEBUG]  There is no memorised next action
+2019-11-15 06:20:03,761 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:20:03,761 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 06:20:03,761 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 06:20:03,761 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 06:46:16,450 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-15 06:46:16,450 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 06:46:16,451 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-15 06:46:16,451 [INFO ]  Enabling coroutine debugging. Loop id 94331004628912.
+2019-11-15 06:46:16,457 [DEBUG]  Extracted model to '/tmp/tmpx7xr1pg3'.
+2019-11-15 06:46:19,478 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 06:46:34,481 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 06:46:34,510 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-15 06:46:34,510 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-15 06:46:34,516 [DEBUG]  Extracted model to '/tmp/tmpn06br3jp'.
+2019-11-15 06:46:34,517 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-15 06:46:36,080 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-15 06:46:36,080 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-15 06:46:39,512 [DEBUG]  Creating a new tracker for id 'zhu'.
+2019-11-15 06:46:39,529 [DEBUG]  Received user message 'list 5 years car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9617456020809236}' and entities '[{'start': 5, 'end': 12, 'value': 'duration', 'entity': 'attribute', 'confidence': 0.8409704693816384, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}, {'start': 13, 'end': 26, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9356158127496607, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 06:46:39,529 [DEBUG]  Current slot values: 
+	attribute: duration
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:46:39,530 [DEBUG]  Logged UserUtterance - tracker now has 4 events
+2019-11-15 06:46:39,531 [DEBUG]  Current tracker state [None, None, None, {}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}]
+2019-11-15 06:46:39,531 [DEBUG]  There is no memorised next action
+2019-11-15 06:46:39,690 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:46:39,690 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.67.
+2019-11-15 06:46:39,690 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 06:46:39,713 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [1, 2, 3, 0])']'
+2019-11-15 06:46:39,713 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 2, 3, 0]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:46:39,714 [DEBUG]  Current tracker state [None, None, {}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}]
+2019-11-15 06:46:39,714 [DEBUG]  There is no memorised next action
+2019-11-15 06:46:39,718 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:46:39,718 [DEBUG]  Predicted next action 'action_listen' with confidence 0.98.
+2019-11-15 06:46:39,718 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 06:46:39,718 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 06:47:00,491 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 06:47:00,500 [DEBUG]  Received user message 'list 5 years car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9617456020809236}' and entities '[{'start': 5, 'end': 12, 'value': 'duration', 'entity': 'attribute', 'confidence': 0.8409704693816384, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}, {'start': 13, 'end': 26, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9356158127496607, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 06:47:00,501 [DEBUG]  Current slot values: 
+	attribute: duration
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 2, 3, 0]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:47:00,501 [DEBUG]  Logged UserUtterance - tracker now has 20 events
+2019-11-15 06:47:00,501 [DEBUG]  Current tracker state [None, {}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}]
+2019-11-15 06:47:00,502 [DEBUG]  There is no memorised next action
+2019-11-15 06:47:00,505 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:47:00,505 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.77.
+2019-11-15 06:47:00,505 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 06:47:00,513 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Sorry, I\'m not sure I understand. Can you rephrase?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: mention, value: None)']'
+2019-11-15 06:47:00,513 [DEBUG]  Current slot values: 
+	attribute: duration
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 2, 3, 0]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:47:00,513 [DEBUG]  Current tracker state [{}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}]
+2019-11-15 06:47:00,514 [DEBUG]  There is no memorised next action
+2019-11-15 06:47:00,517 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:47:00,517 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 06:47:00,517 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 06:47:00,518 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 06:54:41,709 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 06:54:41,718 [DEBUG]  Received user message 'list 5 years car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9617456020809236}' and entities '[{'start': 5, 'end': 12, 'value': 'duration', 'entity': 'attribute', 'confidence': 0.8409704693816384, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}, {'start': 13, 'end': 26, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9356158127496607, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 06:54:41,719 [DEBUG]  Current slot values: 
+	attribute: duration
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 2, 3, 0]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:54:41,719 [DEBUG]  Logged UserUtterance - tracker now has 27 events
+2019-11-15 06:54:41,720 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}]
+2019-11-15 06:54:41,720 [DEBUG]  There is no memorised next action
+2019-11-15 06:54:41,723 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:54:41,723 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.74.
+2019-11-15 06:54:41,724 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 06:54:41,730 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Sorry, I\'m not sure I understand. Can you rephrase?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: mention, value: None)']'
+2019-11-15 06:54:41,730 [DEBUG]  Current slot values: 
+	attribute: duration
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 2, 3, 0]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:54:41,731 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}]
+2019-11-15 06:54:41,731 [DEBUG]  There is no memorised next action
+2019-11-15 06:54:41,734 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:54:41,735 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 06:54:41,735 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 06:54:41,735 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 06:54:52,501 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 06:54:52,511 [DEBUG]  Received user message 'list 5 years car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9617456020809236}' and entities '[{'start': 5, 'end': 12, 'value': 'duration', 'entity': 'attribute', 'confidence': 0.8409704693816384, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}, {'start': 13, 'end': 26, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9356158127496607, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 06:54:52,511 [DEBUG]  Current slot values: 
+	attribute: duration
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 2, 3, 0]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:54:52,511 [DEBUG]  Logged UserUtterance - tracker now has 34 events
+2019-11-15 06:54:52,512 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}]
+2019-11-15 06:54:52,512 [DEBUG]  There is no memorised next action
+2019-11-15 06:54:52,515 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:54:52,516 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.74.
+2019-11-15 06:54:52,516 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 06:54:52,523 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Sorry, I\'m not sure I understand. Can you rephrase?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: mention, value: None)']'
+2019-11-15 06:54:52,523 [DEBUG]  Current slot values: 
+	attribute: duration
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 2, 3, 0]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 06:54:52,524 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'entity_object_type': 1.0}]
+2019-11-15 06:54:52,524 [DEBUG]  There is no memorised next action
+2019-11-15 06:54:52,527 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 06:54:52,527 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 06:54:52,527 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 06:54:52,528 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 06:55:23,347 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-15 06:55:23,347 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 06:55:23,348 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-15 06:55:23,349 [INFO ]  Enabling coroutine debugging. Loop id 93982947554016.
+2019-11-15 06:55:23,355 [DEBUG]  Extracted model to '/tmp/tmpkeqk02w4'.
+2019-11-15 06:55:26,416 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 06:55:40,856 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 06:55:40,884 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-15 06:55:40,884 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-15 06:55:40,890 [DEBUG]  Extracted model to '/tmp/tmpjuu1iijx'.
+2019-11-15 06:55:40,891 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-15 06:55:42,419 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-15 06:55:42,422 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-15 08:31:41,911 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 08:31:43,594 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1411, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1404, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1312, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 492, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 409, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 68, in uvloop.loop.Handle._run
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/run.py", line 228, in load_agent_on_start
+    _interpreter = NaturalLanguageInterpreter.create(nlu_model, endpoints.nlu)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/interpreter.py", line 57, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/interpreter.py", line 263, in __init__
+    self._load_interpreter()
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/interpreter.py", line 286, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/nlu/model.py", line 305, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/nlu/model.py", line 327, in create
+    components.validate_requirements(model_metadata.component_classes)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/nlu/components.py", line 33, in validate_requirements
+    from rasa.nlu import registry
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/nlu/registry.py", line 11, in <module>
+    from rasa.nlu.classifiers.embedding_intent_classifier import EmbeddingIntentClassifier
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/nlu/classifiers/embedding_intent_classifier.py", line 11, in <module>
+    from rasa.utils import train_utils
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/utils/train_utils.py", line 9, in <module>
+    from tensor2tensor.models.transformer import (
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/models/__init__.py", line 26, in <module>
+    from tensor2tensor.models import basic
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/models/basic.py", line 25, in <module>
+    from tensor2tensor.utils import t2t_model
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/utils/t2t_model.py", line 30, in <module>
+    from tensor2tensor.data_generators import multi_problem
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/data_generators/multi_problem.py", line 22, in <module>
+    from tensor2tensor.data_generators import problem
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/data_generators/problem.py", line 27, in <module>
+    from tensor2tensor.data_generators import generator_utils
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/data_generators/generator_utils.py", line 38, in <module>
+    from tensor2tensor.data_generators import text_encoder
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/data_generators/text_encoder.py", line 36, in <module>
+    from tensor2tensor.data_generators import tokenizer
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/data_generators/tokenizer.py", line 61, in <module>
+    six.unichr(i) for i in range(sys.maxunicode)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensor2tensor/data_generators/tokenizer.py", line 62, in <genexpr>
+    if (unicodedata.category(six.unichr(i)).startswith("L") or
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/socketio/client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/engineio/client.py", line 43, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-11-15 08:31:53,362 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-15 08:31:53,362 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 08:31:53,363 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-15 08:31:53,364 [INFO ]  Enabling coroutine debugging. Loop id 94010131490032.
+2019-11-15 08:31:53,370 [DEBUG]  Extracted model to '/tmp/tmp0il8uc2g'.
+2019-11-15 08:31:56,439 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 08:32:11,930 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 08:32:12,010 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-15 08:32:12,010 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-15 08:32:12,024 [DEBUG]  Extracted model to '/tmp/tmpmhveon0a'.
+2019-11-15 08:32:12,051 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-15 08:32:13,633 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-15 08:32:13,633 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-15 08:32:13,642 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/sanic/server.py", line 860, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "uvloop/loop.pyx", line 1417, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1686, in create_server
+OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 5005): address already in use
+2019-11-15 08:40:45,090 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 08:40:50,265 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 08:41:06,925 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 08:41:07,553 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/sanic/app.py", line 1133, in run
+    serve(**server_settings)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/sanic/server.py", line 857, in serve
+    trigger_events(before_start, loop)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/sanic/server.py", line 634, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1411, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1404, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1312, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 492, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 409, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 68, in uvloop.loop.Handle._run
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/run.py", line 249, in load_agent_on_start
+    action_endpoint=endpoints.action,
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/agent.py", line 262, in load_agent
+    remote_storage=remote_storage,
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/agent.py", line 914, in load_local_model
+    remote_storage=remote_storage,
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/agent.py", line 381, in load
+    ensemble = PolicyEnsemble.load(core_model) if core_model else None
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/policies/ensemble.py", line 269, in load
+    policy = policy_cls.load(policy_path)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/rasa/core/policies/keras_policy.py", line 322, in load
+    model = load_model(model_file)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/keras/saving/save.py", line 146, in load_model
+    return hdf5_format.load_model_from_hdf5(filepath, custom_objects, compile)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py", line 215, in load_model_from_hdf5
+    load_weights_from_hdf5_group(f['model_weights'], model.layers)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/keras/saving/hdf5_format.py", line 759, in load_weights_from_hdf5_group
+    K.batch_set_value(weight_value_tuples)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/keras/backend.py", line 3071, in batch_set_value
+    get_session().run(assign_ops, feed_dict=feed_dict)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/keras/backend.py", line 462, in get_session
+    _initialize_variables(session)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/keras/backend.py", line 879, in _initialize_variables
+    [variables_module.is_variable_initialized(v) for v in candidate_vars])
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/client/session.py", line 950, in run
+    run_metadata_ptr)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/client/session.py", line 1173, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/client/session.py", line 1350, in _do_run
+    run_metadata)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/client/session.py", line 1356, in _do_call
+    return fn(*args)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/client/session.py", line 1339, in _run_fn
+    self._extend_graph()
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/tensorflow/python/client/session.py", line 1374, in _extend_graph
+    tf_session.ExtendSession(self._session)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/socketio/client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+  File "/home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/engineio/client.py", line 43, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2019-11-15 08:41:17,935 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-15 08:41:17,935 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 08:41:17,935 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-15 08:41:17,936 [INFO ]  Enabling coroutine debugging. Loop id 94876011012032.
+2019-11-15 08:41:17,942 [DEBUG]  Extracted model to '/tmp/tmprqv8yb07'.
+2019-11-15 08:41:20,992 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 08:41:35,341 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 08:41:35,371 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-15 08:41:35,371 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-15 08:41:35,376 [DEBUG]  Extracted model to '/tmp/tmpbmg1ado3'.
+2019-11-15 08:41:35,378 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-15 08:41:37,015 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-15 08:41:37,016 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-15 08:41:49,769 [DEBUG]  Creating a new tracker for id 'zhu'.
+2019-11-15 08:41:49,792 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9164023490900024}' and entities '[]'
+2019-11-15 08:41:49,792 [DEBUG]  Logged UserUtterance - tracker now has 2 events
+2019-11-15 08:41:49,793 [DEBUG]  Current tracker state [None, None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 08:41:49,793 [DEBUG]  There is a memorised next action '11'
+2019-11-15 08:41:50,033 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2019-11-15 08:41:50,034 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2019-11-15 08:41:50,034 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hello! How can I help you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-15 08:41:50,035 [DEBUG]  Current tracker state [None, None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+2019-11-15 08:41:50,035 [DEBUG]  There is a memorised next action '0'
+2019-11-15 08:41:50,038 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2019-11-15 08:41:50,039 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 08:41:50,039 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 08:41:50,039 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 08:41:52,217 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 08:41:52,225 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9164023490900024}' and entities '[]'
+2019-11-15 08:41:52,225 [DEBUG]  Logged UserUtterance - tracker now has 6 events
+2019-11-15 08:41:52,225 [DEBUG]  Current tracker state [None, {}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 08:41:52,226 [DEBUG]  There is no memorised next action
+2019-11-15 08:41:52,229 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 08:41:52,229 [DEBUG]  Predicted next action 'utter_greet' with confidence 0.70.
+2019-11-15 08:41:52,230 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hey!, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-15 08:41:52,230 [DEBUG]  Current tracker state [{}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+2019-11-15 08:41:52,230 [DEBUG]  There is no memorised next action
+2019-11-15 08:41:52,233 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 08:41:52,234 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 08:41:52,234 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 08:41:52,234 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 08:42:08,747 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 08:42:08,757 [DEBUG]  Received user message 'list 5 years car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9617456020809236}' and entities '[{'start': 5, 'end': 12, 'value': 'duration', 'entity': 'attribute', 'confidence': 0.8409704693816384, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}, {'start': 13, 'end': 26, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9356158127496607, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 08:42:08,757 [DEBUG]  Current slot values: 
+	attribute: duration
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 08:42:08,758 [DEBUG]  Logged UserUtterance - tracker now has 12 events
+2019-11-15 08:42:08,758 [DEBUG]  Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 08:42:08,758 [DEBUG]  There is no memorised next action
+2019-11-15 08:42:08,762 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 08:42:08,762 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.78.
+2019-11-15 08:42:08,762 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 08:42:08,819 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [3, 2, 1, 0])']'
+2019-11-15 08:42:08,819 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [3, 2, 1, 0]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 08:42:08,821 [DEBUG]  Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'prev_action_listen': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0}]
+2019-11-15 08:42:08,821 [DEBUG]  There is no memorised next action
+2019-11-15 08:42:08,825 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 08:42:08,825 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 08:42:08,825 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 08:42:08,826 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:04:01,231 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:04:01,239 [DEBUG]  Received user message 'duration' with intent '{'name': 'query_knowledge_base', 'confidence': 0.8848777857692272}' and entities '[]'
+2019-11-15 09:04:01,239 [DEBUG]  Logged UserUtterance - tracker now has 26 events
+2019-11-15 09:04:01,240 [DEBUG]  Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'prev_action_listen': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 09:04:01,240 [DEBUG]  There is no memorised next action
+2019-11-15 09:04:01,244 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:04:01,244 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.81.
+2019-11-15 09:04:01,244 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:04:01,251 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [2, 3, 0, 1])']'
+2019-11-15 09:04:01,252 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [2, 3, 0, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:04:01,252 [DEBUG]  Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'prev_action_listen': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 09:04:01,253 [DEBUG]  There is no memorised next action
+2019-11-15 09:04:01,256 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:04:01,256 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:04:01,257 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:04:01,257 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:06:27,544 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:06:27,552 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9164023490900024}' and entities '[]'
+2019-11-15 09:06:27,552 [DEBUG]  Logged UserUtterance - tracker now has 40 events
+2019-11-15 09:06:27,553 [DEBUG]  Current tracker state [{'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0, 'prev_action_listen': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 09:06:27,553 [DEBUG]  There is no memorised next action
+2019-11-15 09:06:27,556 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:06:27,557 [DEBUG]  Predicted next action 'utter_greet' with confidence 0.72.
+2019-11-15 09:06:27,557 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hello! How can I help you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-15 09:06:27,558 [DEBUG]  Current tracker state [{'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0, 'entity_attribute': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}]
+2019-11-15 09:06:27,558 [DEBUG]  There is no memorised next action
+2019-11-15 09:06:27,561 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:06:27,561 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:06:27,561 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:06:27,561 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:06:38,184 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:06:38,193 [DEBUG]  Received user message 'duration' with intent '{'name': 'query_knowledge_base', 'confidence': 0.8848777857692272}' and entities '[]'
+2019-11-15 09:06:38,193 [DEBUG]  Logged UserUtterance - tracker now has 44 events
+2019-11-15 09:06:38,193 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 09:06:38,194 [DEBUG]  There is no memorised next action
+2019-11-15 09:06:38,197 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:06:38,198 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.83.
+2019-11-15 09:06:38,198 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:06:38,205 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [1, 0, 3, 2])']'
+2019-11-15 09:06:38,205 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 0, 3, 2]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:06:38,206 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 09:06:38,206 [DEBUG]  There is no memorised next action
+2019-11-15 09:06:38,210 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:06:38,210 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:06:38,210 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:06:38,211 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:06:51,333 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:06:51,341 [DEBUG]  Received user message 'price' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9881985246396767}' and entities '[]'
+2019-11-15 09:06:51,342 [DEBUG]  Logged UserUtterance - tracker now has 58 events
+2019-11-15 09:06:51,342 [DEBUG]  Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 09:06:51,342 [DEBUG]  There is a memorised next action '8'
+2019-11-15 09:06:51,346 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2019-11-15 09:06:51,346 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 1.00.
+2019-11-15 09:06:51,347 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:06:51,354 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [0, 2, 1, 3])']'
+2019-11-15 09:06:51,354 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [0, 2, 1, 3]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:06:51,355 [DEBUG]  Current tracker state [{'intent_greet': 1.0, 'prev_utter_greet': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 09:06:51,355 [DEBUG]  There is a memorised next action '0'
+2019-11-15 09:06:51,359 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2019-11-15 09:06:51,359 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:06:51,359 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:06:51,360 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:06:55,383 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:06:55,392 [DEBUG]  Received user message 'jfwojeri' with intent '{'name': 'query_knowledge_base', 'confidence': 0.7864626597855625}' and entities '[]'
+2019-11-15 09:06:55,392 [DEBUG]  Logged UserUtterance - tracker now has 72 events
+2019-11-15 09:06:55,393 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}]
+2019-11-15 09:06:55,393 [DEBUG]  There is no memorised next action
+2019-11-15 09:06:55,397 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:06:55,397 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.81.
+2019-11-15 09:06:55,397 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:06:55,404 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [3, 0, 2, 1])']'
+2019-11-15 09:06:55,404 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [3, 0, 2, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:06:55,405 [DEBUG]  Current tracker state [{'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_listen': 1.0}, {'intent_query_knowledge_base': 1.0, 'prev_action_query_knowledge_base': 1.0}]
+2019-11-15 09:06:55,406 [DEBUG]  There is no memorised next action
+2019-11-15 09:06:55,409 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:06:55,410 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:06:55,410 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:06:55,411 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:07:56,797 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2019-11-15 09:07:56,797 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-15 09:07:56,797 [DEBUG]  Using the default number of Sanic workers (1).
+2019-11-15 09:07:56,798 [INFO ]  Enabling coroutine debugging. Loop id 94468971330464.
+2019-11-15 09:07:56,804 [DEBUG]  Extracted model to '/tmp/tmpkmkun0sq'.
+2019-11-15 09:07:59,849 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-15 09:08:14,664 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2019-11-15 09:08:14,692 [DEBUG]  Connected to InMemoryTrackerStore.
+2019-11-15 09:08:14,693 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2019-11-15 09:08:14,698 [DEBUG]  Extracted model to '/tmp/tmpwi_la6s7'.
+2019-11-15 09:08:14,700 [DEBUG]  Using yaml library: /home/ubuntu/anaconda3/envs/my_env/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2019-11-15 09:08:16,219 [INFO ]  MappingPolicy not included in policy ensemble. Default intents 'restart and back will not trigger actions 'action_restart' and 'action_back'.
+2019-11-15 09:08:16,220 [WARNI]  You are using an experiential feature: Action 'action_query_knowledge_base'!
+2019-11-15 09:08:23,388 [DEBUG]  Creating a new tracker for id 'zhu'.
+2019-11-15 09:08:23,398 [DEBUG]  Received user message 'jioewrwejkfdsl' with intent '{'name': 'query_knowledge_base', 'confidence': 0.7864626597855625}' and entities '[]'
+2019-11-15 09:08:23,398 [DEBUG]  Logged UserUtterance - tracker now has 2 events
+2019-11-15 09:08:23,399 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:08:23,399 [DEBUG]  There is a memorised next action '8'
+2019-11-15 09:08:23,562 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2019-11-15 09:08:23,562 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 1.00.
+2019-11-15 09:08:23,562 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:08:23,585 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Sorry, I\'m not sure I understand. Can you rephrase?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-15 09:08:23,585 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-15 09:08:23,585 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:08:23,586 [DEBUG]  There is a memorised next action '0'
+2019-11-15 09:08:23,589 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2019-11-15 09:08:23,589 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:08:23,590 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:08:23,590 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:08:47,703 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:08:47,711 [DEBUG]  Received user message 'duration' with intent '{'name': 'query_knowledge_base', 'confidence': 0.8848777857692272}' and entities '[]'
+2019-11-15 09:08:47,711 [DEBUG]  Logged UserUtterance - tracker now has 6 events
+2019-11-15 09:08:47,711 [DEBUG]  Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:08:47,711 [DEBUG]  There is no memorised next action
+2019-11-15 09:08:47,715 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:08:47,715 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.81.
+2019-11-15 09:08:47,716 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:08:47,722 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Sorry, I\'m not sure I understand. Can you rephrase?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2019-11-15 09:08:47,722 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: None
+	restaurant: None
+2019-11-15 09:08:47,723 [DEBUG]  Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:08:47,723 [DEBUG]  There is no memorised next action
+2019-11-15 09:08:47,727 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:08:47,727 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:08:47,727 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:08:47,727 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:08:55,646 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:08:55,655 [DEBUG]  Received user message 'list car insurance' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9887864472177529}' and entities '[{'start': 5, 'end': 18, 'value': 'car_insurance', 'entity': 'object_type', 'confidence': 0.9224375151949952, 'extractor': 'CRFEntityExtractor', 'processors': ['EntitySynonymMapper']}]'
+2019-11-15 09:08:55,655 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: None
+	knowledge_base_listed_objects: None
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:08:55,655 [DEBUG]  Logged UserUtterance - tracker now has 11 events
+2019-11-15 09:08:55,656 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:08:55,656 [DEBUG]  There is no memorised next action
+2019-11-15 09:08:55,660 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:08:55,660 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.80.
+2019-11-15 09:08:55,660 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:08:55,666 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [0, 3, 1, 2])']'
+2019-11-15 09:08:55,666 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [0, 3, 1, 2]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:08:55,667 [DEBUG]  Current tracker state [{'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:08:55,667 [DEBUG]  There is no memorised next action
+2019-11-15 09:08:55,670 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:08:55,671 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:08:55,671 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:08:55,671 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:08:59,179 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:08:59,187 [DEBUG]  Received user message 'uireowjw' with intent '{'name': 'query_knowledge_base', 'confidence': 0.7864626597855625}' and entities '[]'
+2019-11-15 09:08:59,187 [DEBUG]  Logged UserUtterance - tracker now has 25 events
+2019-11-15 09:08:59,188 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:08:59,188 [DEBUG]  There is no memorised next action
+2019-11-15 09:08:59,192 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:08:59,192 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.81.
+2019-11-15 09:08:59,192 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:08:59,199 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [0, 1, 2, 3])']'
+2019-11-15 09:08:59,199 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [0, 1, 2, 3]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:08:59,200 [DEBUG]  Current tracker state [{'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:08:59,200 [DEBUG]  There is no memorised next action
+2019-11-15 09:08:59,204 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:08:59,204 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:08:59,205 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:08:59,205 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:11:33,158 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:11:33,166 [DEBUG]  Received user message 'hotel' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9948749138172678}' and entities '[]'
+2019-11-15 09:11:33,166 [DEBUG]  Logged UserUtterance - tracker now has 39 events
+2019-11-15 09:11:33,167 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:11:33,167 [DEBUG]  There is no memorised next action
+2019-11-15 09:11:33,171 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:11:33,171 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.81.
+2019-11-15 09:11:33,171 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:11:33,178 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [0, 3, 2, 1])']'
+2019-11-15 09:11:33,178 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [0, 3, 2, 1]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:11:33,179 [DEBUG]  Current tracker state [{'prev_action_query_knowledge_base': 1.0, 'entity_object_type': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:11:33,179 [DEBUG]  There is no memorised next action
+2019-11-15 09:11:33,182 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:11:33,182 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:11:33,183 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:11:33,183 [DEBUG]  Deleted lock for conversation 'zhu'.
+2019-11-15 09:11:43,246 [DEBUG]  Recreating tracker for id 'zhu'
+2019-11-15 09:11:43,255 [DEBUG]  Received user message 'list some hotel' with intent '{'name': 'query_knowledge_base', 'confidence': 0.9649737551505586}' and entities '[]'
+2019-11-15 09:11:43,256 [DEBUG]  Logged UserUtterance - tracker now has 53 events
+2019-11-15 09:11:43,256 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:11:43,257 [DEBUG]  There is no memorised next action
+2019-11-15 09:11:43,260 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:11:43,260 [DEBUG]  Predicted next action 'action_query_knowledge_base' with confidence 0.81.
+2019-11-15 09:11:43,261 [DEBUG]  Calling action endpoint to run action 'action_query_knowledge_base'.
+2019-11-15 09:11:43,268 [DEBUG]  Action 'action_query_knowledge_base' ended with events '['BotUttered(text: Found the following objects of type \'car_insurance\':, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 1: traffic insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 2: engine insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 3: glass insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'BotUttered(text: 4: robber insurance, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})', 'SlotSet(key: object_type, value: car_insurance)', 'SlotSet(key: mention, value: None)', 'SlotSet(key: attribute, value: None)', 'SlotSet(key: knowledge_base_last_object, value: None)', 'SlotSet(key: knowledge_base_last_object_type, value: car_insurance)', 'SlotSet(key: knowledge_base_listed_objects, value: [1, 2, 0, 3])']'
+2019-11-15 09:11:43,268 [DEBUG]  Current slot values: 
+	attribute: None
+	city: None
+	cuisine: None
+	hotel: None
+	knowledge_base_last_object: None
+	knowledge_base_last_object_type: car_insurance
+	knowledge_base_listed_objects: [1, 2, 0, 3]
+	mention: None
+	object_type: car_insurance
+	restaurant: None
+2019-11-15 09:11:43,269 [DEBUG]  Current tracker state [{'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_listen': 1.0, 'intent_query_knowledge_base': 1.0}, {'prev_action_query_knowledge_base': 1.0, 'intent_query_knowledge_base': 1.0}]
+2019-11-15 09:11:43,269 [DEBUG]  There is no memorised next action
+2019-11-15 09:11:43,273 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2019-11-15 09:11:43,273 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2019-11-15 09:11:43,274 [DEBUG]  Action 'action_listen' ended with events '[]'
+2019-11-15 09:11:43,274 [DEBUG]  Deleted lock for conversation 'zhu'.

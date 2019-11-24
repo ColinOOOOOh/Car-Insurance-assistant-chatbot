@@ -42,9 +42,9 @@ class user(db.Model):
     pwd = db.Column(db.String(32), nullable=False, unique=False)
     image = db.Column(db.String(120), nullable=False, unique=False)
 
-    roleid = db.Column(db.Integer, primary_key=True)
+    roleid = db.Column(db.String(15), nullable=False, unique=False)
 
-    roleid = db.Column(db.Integer,db.ForeignKey('role.roleid'))
+    # roleid = db.Column(db.Integer,db.ForeignKey('role.roleid'))
 
 class company_user(db.Model):
 
@@ -103,21 +103,36 @@ class company_business(db.Model):
 class detail_insurance(db.Model):
 
     __tablename__ = 'detail_insurance'
+
     insuranceid = db.Column(db.Integer,primary_key=True)
-    insurancename = db.Column(db.String(20), nullable=False, unique=False)
+    insurance = db.Column(db.Integer, nullable=False, unique=False)
+    userid = db.Column(db.Integer, nullable=False, unique=False)
 
-    company = db.Column(db.String(20), nullable=False, unique=False)
-    businessname = db.Column(db.String(20), nullable=False, unique=False)
-    insurance_description = db.Column(db.String(200), nullable=False, unique=False)
-    business_description = db.Column(db.String(200), nullable=False, unique=False)
+    name = db.Column(db.String(20), nullable=False, unique=False)
 
-
-
-
-
+    coverage = db.Column(db.String(20), nullable=False, unique=False)
+    duration = db.Column(db.String(20), nullable=False, unique=False)
+    price = db.Column(db.String(200), nullable=False, unique=False)
+    price_range = db.Column(db.String(200), nullable=False, unique=False)
 
 
 
+class car_insurance(db.Model):
+    __tablename__ = 'car_insurance'
+    id = db.Column(db.Integer,primary_key=True)
+    name = db.Column(db.String(20), nullable=False, unique=False)
+    coverage = db.Column(db.String(20), nullable=False, unique=False)
+    duration = db.Column(db.String(20), nullable=False, unique=False)
+    price = db.Column(db.String(200), nullable=False, unique=False)
+    price_range = db.Column(db.String(200), nullable=False, unique=False)
 
 
+class claim(db.Model):
+    __tablename__ = 'claim'
+    id = db.Column(db.Integer,primary_key=True)
+    insuranceid = db.Column(db.Integer, nullable=False, unique=False)
+    userid = db.Column(db.Integer, nullable=False, unique=False)
+    description = db.Column(db.String(120), nullable=False, unique=False)
+    date = db.Column(db.String(40), nullable=False, unique=False)
+    state = db.Column(db.String(30), nullable=False, unique=False)
 db.create_all()

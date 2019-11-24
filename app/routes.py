@@ -1,202 +1,249 @@
 from app import app
-from flask import render_template,request
-from app.__init__ import user,db,insurance,business,company,company_business,company_insurance,company_user,detail_insurance
+from flask import render_template,request,session
+from app.__init__ import user,db,insurance,detail_insurance,car_insurance,claim
 import json
-from app.forms import registerForm,loginform
+import time
+import requests
 
 
 
+global userdeid
+userdeid = -1
 
-
-@app.route('/')
+@app.route('/main')
 def zhuye():
 
     return render_template('Main.html')
 @app.route('/login',methods = ['GET','POST'])
 def login():
 
-    username = request.form.get('User')
-    passwd = request.form.get('password')
+    if request.method =="POST":
 
-    print(username,passwd)
-    a= user.query.filter(user.username==username,user.pwd==passwd).first()
-    if a:
-        print('yes')
-        return render_template('Main.html')
-    else:
-        print('no')
+
+        username = request.form.get('username')
+        passwd = request.form.get('password')
+
+        # print(username, passwd)
+        a = user.query.filter(user.username == username, user.pwd == passwd).all()
+        # print('aaaaaaaaaa',a[0].userid)
+
+        if a:
+
+            global userdeid
+            userdeid = a[0].userid
+            session['userdeid']=userdeid
+            question = 'uid '+str(userdeid)
+            chat(question)
+            data = {
+                'userid': a[0].userid,
+            }
+            print(userdeid)
+            return render_template('Main.html', userid=a[0].userid)
+        else:
+            # print('no')
+            return render_template('Login.html')
+    if request.method =="GET":
         return render_template('Login.html')
 
 @app.route('/register',methods = ['GET','POST'])
 def regist():
-    form = registerForm()
-    if form.validate_on_submit():
-        username = request.values.get("username")
-        passwd = request.values.get("pwd")
-        userid = request.values.get("userid")
+    # print(11111111)
+    # username = request.values.get("username")
+    # passwd = request.values.get("pwd")
+    # userid = request.values.get("userid")
+    #
+    # roleid = request.values.get("roleid")
+    #
+    # gender = request.values.get("gender")
+    #
+    # birthday = request.values.get("birthday")
+    # email = request.values.get("email")
+    # telephone = request.values.get("telephone")
+    # image = request.values.get('image')
+    #
+    # # 先查询。在插入或删除或更新
+    # a = user.query.filter(user.userid == userid, user.username == username).all()
+    # if len(a) == 0:
+    #     me = user(userid=userid, username=username, email=email, birthday=birthday, gender=gender,
+    #               telephone=telephone, pwd=passwd, image=image, roleid=roleid)
+    #     db.session.add(me)
+    #     db.session.commit()
+    #
+    #     return render_template('Login.html')
+    # else:
+    #     # 返回注册界面说明 用户名和userid 已存在
+    # global userdeid
+    # if userdeid:
+    #     print('userdeid',userdeid)
+    print(request.method)
+    if request.method == "GET":
+        return render_template('Register.html')
+    if request.method == "POST":
+        print(request.form)
+        username = request.form.get("username")
+        passwd = request.form.get("password")
 
-        roleid = request.values.get("roleid")
 
+        roleid = request.values.get("role")
+        print(roleid,'++++++++++++++++++++++++++')
         gender = request.values.get("gender")
+        print(gender,'++++++++++++++++++++++++++')
+        birthday = request.form.get("birthday")
+        email = request.form.get("email")
+        telephone = request.form.get("mobilenumber")
 
-        birthday = request.values.get("birthday")
-        email = request.values.get("email")
-        telephone = request.values.get("telephone")
-        image = request.values.get('image')
+        if username==None or passwd==None or roleid ==None or gender==None or birthday==None or email==None or telephone==None:
+            return render_template(('Register.html'))
+
+
+
+
 
         # 先查询。在插入或删除或更新
-        a = user.query.filter(user.userid == userid,user.username==username).all()
-        if len(a)==0:
-            me = user(userid = userid,username = username,email = email,birthday = birthday,gender = gender,
-                  telephone = telephone,pwd = passwd,image=image,roleid=roleid)
+        a = user.query.filter(user.username == username,user.email==email,user.gender==gender,
+                              user.birthday==birthday,user.telephone==telephone).all()
+        if len(a) == 0:
+            me = user(username=username, email=email, birthday=birthday, gender=gender,
+                      telephone=telephone, pwd=passwd, roleid=roleid,image = 'None')
             db.session.add(me)
             db.session.commit()
 
             return render_template('Login.html')
         else:
-            #返回注册界面说明 用户名和userid 已存在
-            return render_template('Register.html')
+            return render_template(('Register.html'))
+            # 返回注册界面说明 用户名和userid 已存在
 
-    else:
-        return render_template('Register.html')
-
-
-@app.route('/username_exit',methods = ['GET','POST'])
+@app.route('/username_exist',methods = ['GET'])
 def username_exit():
     username = request.values.get('username')
-    print(username)
-    a = user.query.filter(user.username == username).all()
-    print('changdu',len(a))
-    if len(a)!=0:
+    print('usernanme ----------------------------------',username)
+    if len(username)<4:
         data = {
-            'msg': 'yes',
+            'result': 'no',
         }
         jstr = json.dumps(data)
         return jstr
     else:
         data = {
-            'msg': 'no',
+            'result': 'yes',
         }
         jstr = json.dumps(data)
         return jstr
 
-@app.route('/email_exit',methods = ['GET','POST'])
+@app.route('/email_exit',methods = ['GET'])
 def email_exit():
     email = request.values.get('email')
-    a = user.query.filter(user.email == email).all()
-    if len(a)!=0:
+    print(email,'aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    if '@' in email:
         data = {
-            'msg': 'yes',
+            'result': 'yes',
         }
         jstr = json.dumps(data)
         return jstr
     else:
         data = {
-            'msg': 'no',
+            'result': 'no',
         }
         jstr = json.dumps(data)
         return jstr
-
 
 @app.route('/mobilenumber_exit',methods = ['GET','POST'])
 def mobilenumber_exit():
     telephone = request.values.get('mobile_number')
-    a = user.query.filter(user.telephone == telephone).all()
-    if len(a)!=0:
+    # a = user.query.filter(user.telephone == telephone).all()
+
+    if len(telephone)!=0 and telephone.isdigit():
         data = {
-            'msg': 'yes',
+            'result': 'yes',
         }
         jstr = json.dumps(data)
         return jstr
     else:
         data = {
-            'msg': 'no',
+            'result': 'no',
         }
         jstr = json.dumps(data)
         return jstr
 
-
+#需要加上从数据库获取用户名，但目前不影响功能
 @app.route('/answer_question',methods = ['GET','POST'])
 def answer_question():
-    question = request.values.get('question')
+    userid = session.get('userdeid')
+    # global userdeid
+    print('chat________________chat________________chat________________chat________________chat________________',userid)
+    # question = request.form.get('message')
+    message = request.get_json()
+    question = message['message']
+    print(question)
     # 调用 ouzhu 算法
     data = {
-        'msg': question
+        # 'response': 'aaaaaaa'
+        # 'message': questio
+        'response':  chat(question)[0]
     }
     jstr = json.dumps(data)
+    print(jstr)
     return jstr
 
 
-@app.route('/remove_insurance_info',methods = ['GET','POST'])
-def remove_insurance_info():
-    insuranceid = request.values.get('insuranceid')
+def chat(message):
 
-    a = insurance.query.filter(insurance.insuranceid == insuranceid).all()
-    if len(a)==0:
-        # 数据库本就不存在这个id的数据
-        data = {
-            'msg': 'no data found'
-        }
-        jstr = json.dumps(data)
+        bot_message = ""
+        print(message)
+        print("Sending message now...")
+        r = requests.post('http://localhost:5005/webhooks/rest/webhook', json={"message": message})
+        responses = []
+        print("Bot says, ")
+        for i in r.json():
+                bot_message = i['text']
+                responses.append(bot_message)
+                print(f"{i['text']}")
+        return responses
 
-        return jstr
+@app.route('/edit_personal_info',methods = ['GET','POST'])
+def edit_personal_info():
+    global userdeid
+    # userid = userdeid
+    userid =session.get('userdeid')
+    print(userid)
+    if request.method=="GET":
+        return render_template("Profile.html")
     else:
-        ins_info = insurance.query.filter_by(insuranceid = insuranceid).first()
-        db.session.delete(ins_info)
-        db.session.commit()
-        # check again
-        aa = insurance.query.filter(insurance.insuranceid == insuranceid).all()
-        if len(aa)==0:
+        # userid = request.form.get('userid')
+        username = request.form.get("username")
+        email = request.form.get('email')
+        telephone = request.form.get('mobilenumber')
+        gender = request.form.get('gender')
+        birthday = request.form.get('birthday')
+        # image = request.values.get('image')
+        user_info = user.query.filter(user.userid == userid).all()
+
+
+        if len(user_info)!=0:
+            user_info[0].email = email
+            user_info[0].telephone = telephone
+            user_info[0].gender = gender
+            user_info[0].birthday = birthday
+            user_info[0].username = username
+            # user_info[0].image = image
+            db.session.commit()
+
+        # check 是否更新成功
+        a = user.query.filter(user.userid == userid,user.email==email, user.telephone == telephone, user.gender == gender,
+                              user.birthday ==birthday).all()
+
+        if len(a)!=0:
             data = {
                 'msg': 'yes'
             }
             jstr = json.dumps(data)
-            return jstr
+            return render_template('Management.html')
         else:
             data = {
                 'msg': 'no'
             }
             jstr = json.dumps(data)
-            return jstr
-
-
-
-@app.route('/edit_personal_info',methods = ['GET','POST'])
-def edit_personal_info():
-    userid = request.values.get('userid')
-    email = request.values.get('email')
-    telephone = request.values.get('mobile_number')
-    gender = request.values.get('gender')
-    birthday = request.values.get('birthday')
-    image = request.values.get('image')
-    user_info = user.query.filter(user.userid == userid).all()
-
-
-    if len(user_info)!=0:
-        user_info[0].email = email
-        user_info[0].telephone = telephone
-        user_info[0].gender = gender
-        user_info[0].birthday = birthday
-        user_info[0].image = image
-        db.session.commit()
-
-    # check 是否更新成功
-    a = user.query.filter(user.userid == userid,user.email==email, user.telephone == telephone, user.gender == gender,
-                          user.birthday ==birthday,user.image==image).all()
-
-    if len(a)!=0:
-        data = {
-            'msg': 'yes'
-        }
-        jstr = json.dumps(data)
-        return jstr
-    else:
-        data = {
-            'msg': 'no'
-        }
-        jstr = json.dumps(data)
-        return jstr
-
+            return render_template('Management.html')
 
 @app.route('/check_telephone_number',methods = ['GET','POST'])
 def check_telephone():
@@ -221,217 +268,382 @@ def check_telephone():
         jstr = json.dumps(data)
         return jstr
 
-@app.route('/add_insurance',methods = ['GET'])
-def add_insurance():
-    # insurance_name = request.values.get('insurance_name')
-    # insurance_des = request.values.get('insurance_description')
-    # a = insurance.query.filter(insurance.insurancename==insurance_name,insurance.insdescription==insurance_des).all()
-    # if len(a)!=0:
-    #     data = {
-    #         'result': 'no'
-    #     }
-    #     jstr = json.dumps(data)
-    #     return jstr
-    #
-    # me = insurance(insdescription=insurance_des, insurancename=insurance_name)
-    # db.session.add(me)
-    # db.session.commit()
-    # a = insurance.query.filter(insurance.insurancename == insurance_name,
-    #                            insurance.insdescription == insurance_des).all()
-    # print('---------------',a[0].insuranceid)
-    #
-    # # 先插到insurance表得到insurance id
-    #
-    # companyname = request.values.get('company')
-    #
-    # business_name = request.values.get('business_name')
-    # business_des = request.values.get('business_description')
-    #
-    # be = business(busdescription=business_des, businessname=business_name)
-    # db.session.add(be)
-    # db.session.commit()
-    #
-    # b = business.query.filter(business.businessname == business_name,
-    #                            business.busdescription == business_des).all()
-    # print('---------------',b[0].businessid)
-    #
-    # #再插到business 表，得到business id
-    #
-    # c= company.query.filter(company.companyname == companyname).all()
-    # print(c[0].companyid)
-    #
-    # c_b = company_business(companyid =c[0].companyid,businessid =b[0].businessid)
-    # db.session.add(c_b)
-    # db.session.commit()
-    #
-    # c_i = company_insurance(companyid =c[0].companyid,insuranceid =a[0].insuranceid)
-    # db.session.add(c_i)
-    # db.session.commit()
-    #
-    # data = {
-    #     'result': 'yes',
-    #     'insuranceid':a[0].insuranceid
-    # }
-    # jstr = json.dumps(data)
-    # return jstr
-    insurance_name = request.values.get('insurance_name')
-    insurance_des = request.values.get('insurance_description')
-    companyname = request.values.get('company')
-    business_name = request.values.get('business_name')
-    business_des = request.values.get('business_description')
+# @app.route('/add_insurance',methods = ['POST'])
+# def add_insurance():
+#     info = request.get_json()
+#     userid = 1
+#     # userid = info['userid']
+#     insurance_name = info['insurance_name']
+#     insurance_des = info['insurance_description']
+#     companyname = info['company']
+#     business_name = info['business_name']
+#     business_des = info['business_description']
+#
+#
+#     a = detail_insurance.query.filter(detail_insurance.insurancename==insurance_name,
+#                                       detail_insurance.insurance_description==insurance_des,
+#                                       detail_insurance.company==companyname,
+#                                       detail_insurance.business_description==business_des,
+#                                       detail_insurance.businessname==business_name).all()
+#     if len(a)!=0:
+#         data = {
+#             # 'message': question
+#             'result': 'no'
+#         }
+#         jstr = json.dumps(data)
+#         return jstr
+#
+#
+#     me = detail_insurance(userid=userid,insurancename=insurance_name, businessname=business_name,company=companyname
+#                    ,insurance_description=insurance_des,business_description=business_des,insurance=1)
+#     db.session.add(me)
+#     db.session.commit()
+#
+#     data = {
+#         # 'message': question
+#         'result': 'yes'
+#     }
+#     jstr = json.dumps(data)
+#     return jstr
 
-    me = detail_insurance(insurancename=insurance_name, businessname=business_name,company=companyname
-                   ,insurance_description=insurance_des,business_description=business_des)
+# @app.route('/edit_insurance',methods = ['POST'])
+# def edit_insurance():
+#     info = request.get_json()
+#     insuranceid = info['insurance_id']
+#     insurance_name = info['insurance_name']
+#     insurance_des = info['insurance_description']
+#     companyname = info['company']
+#     business_name = info['business_name']
+#     business_des = info['business_description']
+#
+#     a = detail_insurance.query.filter(detail_insurance.insuranceid==insuranceid).all()
+#     if len(a)!= 0:
+#         a[0].insurancename=insurance_name
+#         a[0].insurance_description = insurance_des
+#         a[0].company = companyname
+#         a[0].businessname = business_name
+#         a[0].business_description = business_des
+#         db.session.commit()
+#
+#     check = detail_insurance.query.filter(detail_insurance.insuranceid==insuranceid,
+#                                           detail_insurance.insurancename == insurance_name,
+#                                           detail_insurance.insurance_description == insurance_des,
+#                                           detail_insurance.company == companyname,
+#                                           detail_insurance.businessname == business_name,
+#                                           detail_insurance.business_description == business_des,).all()
+#
+#     if len(check)!=0:
+#         data = {
+#             'result': 'yes',
+#         }
+#         jstr = json.dumps(data)
+#         return jstr
+#     else:
+#         data = {
+#             'result': 'no',
+#         }
+#         jstr = json.dumps(data)
+#         return jstr
+
+@app.route('/get_management_info',methods = ['GET','POST'])
+def get_management_info():
+    global userdeid
+    # userid = userdeid
+    userid = session.get('userdeid')
+    if request.method=='GET':
+        return render_template('Management.html')
+    if request.method == 'POST':
+        msg = request.get_json()
+        c = detail_insurance.query.filter(detail_insurance.userid==userid).all()
+        result = []
+        for i in c:
+            data = {
+                "serial_id":i.insuranceid,
+                "insurance_id":i.insurance,
+                "insurance_name" : i.name,
+                "coverage" : i.coverage,
+                "duration" : i.duration,
+                "price" : i.price,
+                "price_range" : i.price_range
+            }
+            result.append(data)
+
+        data = {
+            "result":result
+        }
+        jstr = json.dumps(data)
+        print(jstr)
+        return jstr
+
+# @app.route('/remove_insurance_info',methods = ['DELETE'])
+# def delete_insurance():
+#
+#     insuranceid_info = request.get_json()
+#     print('asdsdasda',insuranceid_info)
+#     insuranceid = insuranceid_info['insurance_id']
+#     print(insuranceid)
+#
+#
+#     a_check = detail_insurance.query.filter(detail_insurance.insuranceid == insuranceid).all()
+#     if len(a_check)==0:
+#         data = {
+#             'result': 'no',
+#         }
+#         jstr = json.dumps(data)
+#         return jstr
+#     else:
+#         a = detail_insurance.query.filter_by(insuranceid = insuranceid).first()
+#         db.session.delete(a)
+#         db.session.commit()
+#
+#
+#     ins_info = insurance.query.filter(insurance.insuranceid==insuranceid).all()
+#     if len(ins_info)!=0:
+#         data = {
+#             'result': 'no',
+#         }
+#         jstr = json.dumps(data)
+#         return jstr
+#     else:
+#         data = {
+#             'result': 'yes',
+#         }
+#         jstr = json.dumps(data)
+#         return jstr
+
+@app.route('/chat_bot',methods = ['POST'])
+def chat_bot():
+
+    json = request.get_json()
+    message = json['message']
+    item = json['attribute']
+    if message == 'query_insurance':
+        msg = insurance_list()
+    elif message =='query_insurance_with_price':
+        msg = query_insurance_with_price(item)
+    else:
+        msg = query_insurance_with_name(item)
+    return msg
+
+def insurance_list():
+    car_insurance_list = car_insurance.query.filter().all()
+    print(len(car_insurance_list))
+    result = []
+    for i in car_insurance_list:
+        data = {
+            "id":i.id,
+            "name":i.name,
+            "coverage":i.coverage,
+            "duration":i.duration,
+            "price":i.price,
+            "price_range":i.price_range
+        }
+        result.append(data)
+    data = {
+        "car_insurance": result
+    }
+    jstr = json.dumps(data)
+    return jstr
+
+def query_insurance_with_price(price):
+    car_insurance_list = car_insurance.query.filter(car_insurance.price_range==price).all()
+    print(len(car_insurance_list))
+    result = []
+    for i in car_insurance_list:
+        data = {
+            "id":i.id,
+            "name":i.name,
+            "coverage":i.coverage,
+            "duration":i.duration,
+            "price":i.price,
+            "price_range":i.price_range
+        }
+        result.append(data)
+    data = {
+        "car_insurance": result
+    }
+    jstr = json.dumps(data)
+    print(type(jstr))
+    return jstr
+
+def query_insurance_with_name(name):
+
+    car_insurance_list = car_insurance.query.filter(car_insurance.name==name).all()
+    print(len(car_insurance_list))
+    result = []
+    for i in car_insurance_list:
+        data = {
+            "id":i.id,
+            "name":i.name,
+            "coverage":i.coverage,
+            "duration":i.duration,
+            "price":i.price,
+            "price_range":i.price_range
+        }
+        result.append(data)
+    data = {
+        "car_insurance": result
+    }
+    jstr = json.dumps(data)
+    return jstr
+
+
+@app.route('/get_price',methods = ['POST'])
+def get_price():
+    jsons = request.get_json()
+    name = jsons['name']
+    coverage = jsons['coverage']
+    duration = jsons['duration']
+
+    car_insurance_price = car_insurance.query.filter(car_insurance.name==name,car_insurance.coverage==coverage,
+                                                     car_insurance.duration==duration).all()
+    if len(car_insurance_price)!=0:
+        data = {
+            "price": car_insurance_price[0].price
+        }
+        jstr = json.dumps(data)
+        print(type(jstr))
+        return jstr
+    else:
+        data = {
+            "price": "none"
+        }
+
+        jstr = json.dumps(data)
+        print(type(jstr))
+        return jstr
+
+
+@app.route('/buy_ins',methods = ['GET','POST'])
+def buy_ins():
+    print('hellohellohellohellohellohellohello----hellohellohellohellohellohello')
+    global userdeid
+    # userid=userdeid
+    # userid = session.get('userdeid')
+
+    jsons = request.get_json()
+    userid = jsons['uid']
+    name = jsons['name']
+    coverage = jsons['coverage']
+    duration = jsons['duration']
+    print('buy_ins-----------buy_ins-----------buy_ins-----------buy_ins-----------buy_ins-----------',userid)
+
+    c = car_insurance.query.filter(car_insurance.name == name,car_insurance.coverage==coverage,
+                                   car_insurance.duration==duration).all()
+    price = c[0].price
+    price_range = c[0].price_range
+    insurance = c[0].id
+    me = detail_insurance(insurance=insurance,userid=userid,name=name, duration=duration,coverage=coverage
+                   ,price=price,price_range=price_range)
+
+
+
     db.session.add(me)
     db.session.commit()
-    c = detail_insurance.query.filter(detail_insurance.insurancename == insurance_name,
-                                      detail_insurance.businessname == business_name,
-                                      detail_insurance.company == companyname,
-                                      detail_insurance.insurance_description == insurance_des,
-                                      detail_insurance.business_description == business_des).all()
-    if len(c)!=0:
+
+    d = detail_insurance.query.filter(detail_insurance.name == name,detail_insurance.coverage==coverage,
+                                   detail_insurance.duration==duration,detail_insurance.price_range==price_range,
+                                   detail_insurance.price==price,detail_insurance.userid==userid,
+                                      detail_insurance.insurance==insurance).all()
+
+    data = {
+        "id": d[0].insuranceid
+    }
+    jstr = json.dumps(data)
+    print(jstr)
+    return jstr
+
+
+@app.route('/sign_out',methods = ['POST','GET'])
+def sign_out():
+    global userdeid
+    # userdeid = -1
+    session.pop('userdeid',None)
+    return render_template('Login.html')
+
+#
+# @app.route('/order',methods = ['GET','POST'])
+# def order():
+#     global userdeid
+#     userid = userdeid
+#     userid = 3
+#     jsons = request.get_json()
+#     deteil_table_insuranceid = jsons['iid']
+#     description = jsons['description']
+#
+#     localtime = time.asctime(time.localtime(time.time()))
+#     me = claim(insuranceid=deteil_table_insuranceid,description=description,userid = userid,date=localtime,
+#                state = 'Processing')
+#
+#     db.session.add(me)
+#     db.session.commit()
+#
+#     d = claim.query.filter(claim.insuranceid == deteil_table_insuranceid,claim.description==description).all()
+#
+#     data = {
+#         "id": d[0].id
+#     }
+#     jstr = json.dumps(data)
+#     print(type(jstr))
+#     return jstr
+
+
+@app.route('/insurance_m',methods = ['GET','POST'])
+def insurance_m():
+    global userdeid
+    # userid = userdeid
+
+    userid = session.get('userdeid')
+    if request.method=='GET':
+        return render_template('Insurance_management.html')
+    if request.method == 'POST':
+        # msg = request.get_json()
+        # userid = msg['userid']
+        c = claim.query.filter(claim.userid==userid).all()
+        result = []
+        for i in c:
+            data = {
+                "insuranceid":i.insuranceid,
+                "description":i.description,
+                "date" : i.date,
+                "state" : i.state,
+            }
+            result.append(data)
+
         data = {
-            'result': 'yes',
-            'insuranceid':c[0].insuranceid
+            "result":result
         }
         jstr = json.dumps(data)
-        return jstr
-    else:
-        data = {
-            'result': 'no'
-        }
-        jstr = json.dumps(data)
+        print(jstr)
         return jstr
 
-@app.route('/delete_insurance',methods = ['GET'])
-def delete_insurance():
-    insuranceid = request.values.get('insurance_id')
-    a_check = insurance.query.filter(insurance.insuranceid == insuranceid).all()
-    if len(a_check)==0:
-        data = {
-            'result': 'no',
-        }
-        jstr = json.dumps(data)
-        return jstr
-    else:
-        # 先删外键关联的记录
-        company_ins = company_insurance.query.filter_by(insuranceid=insuranceid).first()
-        db.session.delete(company_ins)
-        db.session.commit()
+@app.route('/login_app',methods = ['GET','POST'])
+def login_app():
 
-        # 再删insurance
-        a = insurance.query.filter_by(insuranceid = insuranceid).first()
-        db.session.delete(a)
-        db.session.commit()
+    if request.method =="POST":
 
 
+        # username = request.form.get('username')
+        # passwd = request.form.get('password')
+        msg = request.get_json()
+        username = msg['username']
+        passwd = msg['password']
+        print(username,passwd)
+        a = user.query.filter(user.username == username, user.pwd == passwd).all()
 
-    #check
-    ins_info = insurance.query.filter(insurance.insuranceid==insuranceid).all()
-    if len(ins_info)!=0:
-        data = {
-            'result': 'no',
-        }
-        jstr = json.dumps(data)
-        return jstr
-    else:
-        data = {
-            'result': 'yes',
-        }
-        jstr = json.dumps(data)
-        return jstr
+        if a:
+            global userdeid
+            userdeid = a[0].userid
 
-@app.route('/edit_insurance',methods = ['GET'])
-def edit_insurance():
-    # insuranceid = request.values.get('insurance_id')
-    # insurance_name = request.values.get('insurance_name')
-    # insurance_des = request.values.get('insurance_description')
-    # companyname = request.values.get('company')
-    # businessid = request.values.get('business_id')
-    # business_name = request.values.get('business_name')
-    # business_des = request.values.get('business_description')
-    #
-    # a = insurance.query.filter(insurance.insuranceid==insuranceid).all()
-    # if len(a)!=0:
-    #     a[0].insurancename=insurance_name
-    #     a[0].insdescription = insurance_des
-    #     db.session.commit()
-    #
-    # # b = company_insurance.query.filter(company_insurance.insuranceid == insuranceid).all()
-    # # if len(b)!=0:
-    # #     companyid = b[0].companyid
-    # #
-    # #     c = company.query.filter(company.companyid == companyid).all()
-    # #     if len(c) != 0:
-    # #         c[0].companyname = companyname
-    # #         db.session.commit()
-    #
-    # # b_c = company_insurance.query.filter(company_insurance.insuranceid == insuranceid).all()
-    # # b = business.query.filter(business.businessid==businessid).all()
-    # # if len(a)!=0:
-    # #     a[0].insurancename=insurance_name
-    # #     a[0].insdescription = insurance_des
-    # #     db.session.commit()
-    #
-    # b = business.query.filter(business.businessid==businessid).all()
-    # if len(a)!=0:
-    #     b[0].businessname=business_name
-    #     b[0].busdescription = business_des
-    #     db.session.commit()
-    #
-    #
-    # check = insurance.query.filter(insurance.insuranceid==insuranceid,insurance.insurancename==insurance_name,
-    #                                insurance.insdescription==insurance_des).all()
-    # checkb = business.query.filter(business.businessid==businessid,business.businessname==business_name,
-    #                                business.busdescription==business_des).all()
-    # if len(check)!=0 and len(checkb)!=0:
-    #     data = {
-    #         'result': 'yes',
-    #     }
-    #     jstr = json.dumps(data)
-    #     return jstr
-    # else:
-    #     data = {
-    #         'result': 'no',
-    #     }
-    #     jstr = json.dumps(data)
-    #     return jstr
+            data = {
+                'userid': a[0].userid,
+            }
+            jstr = json.dumps(data)
 
-
-    insuranceid = request.values.get('insurance_id')
-    insurance_name = request.values.get('insurance_name')
-    insurance_des = request.values.get('insurance_description')
-    companyname = request.values.get('company')
-    businessid = request.values.get('business_id')
-    business_name = request.values.get('business_name')
-    business_des = request.values.get('business_description')
-
-    a = detail_insurance.query.filter(detail_insurance.insuranceid==insuranceid).all()
-    print(insuranceid)
-    if len(a)!=0:
-        a[0].insurancename=insurance_name
-        a[0].insurance_description = insurance_des
-        a[0].company = companyname
-        a[0].businessname = business_name
-        a[0].business_description = business_des
-        db.session.commit()
-
-    check = detail_insurance.query.filter(detail_insurance.insuranceid==insuranceid,
-                                          detail_insurance.insurancename == insurance_name,
-                                          detail_insurance.insurance_description == insurance_des,
-                                          detail_insurance.company == companyname,
-                                          detail_insurance.businessname == business_name,
-                                          detail_insurance.business_description == business_des,).all()
-
-    if len(check)!=0:
-        data = {
-            'result': 'yes',
-        }
-        jstr = json.dumps(data)
-        return jstr
-    else:
-        data = {
-            'result': 'no',
-        }
-        jstr = json.dumps(data)
-        return jstr
+            return jstr
+        else:
+            data = {
+                'userid': '-1',
+            }
+            jstr = json.dumps(data)
+            return jstr

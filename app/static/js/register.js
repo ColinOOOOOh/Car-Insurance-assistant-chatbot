@@ -9,7 +9,7 @@ angular.module('register', [])
     $scope.username_exist = function(){
         $http({
             method: 'GET',
-            url: 'https://c57de8c8-3d5b-45d1-b070-9a89b37c0b99.mock.pstmn.io/username_exist'
+            url: 'username_exist'
         }).then(function (response) {
             var res_data = response.data.result;
             var username_check = document.getElementById('valid_username');
@@ -27,7 +27,7 @@ angular.module('register', [])
     $scope.email_valid = function(){
         $http({
             method: 'GET',
-            url: 'https://ac785e2a-c9be-488e-aee3-aa2cb088bf8a.mock.pstmn.io/email_valid'
+            url: 'email_exit'
         }).then(function (response) {
             var res_data = response.data.result;
             var email_check = document.getElementById('valid_email');
@@ -45,7 +45,7 @@ angular.module('register', [])
     $scope.mobilenumber_valid = function(){
         $http({
             method: 'GET',
-            url: 'https://e9da2167-a5c2-4a83-9982-614edcd65d99.mock.pstmn.io/mobilenumber_valid'
+            url: 'mobilenumber_exit'
         }).then(function (response) {
             var res_data = response.data.result;
             var mobilenumber_check = document.getElementById('valid_mobilenumber');
