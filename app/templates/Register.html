@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="static/angular-1.7.8/angular.js"></script>
+    <script src="static/Mock/mock.js"></script>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="static/css/register.css"/>
+</head>
+<body>
+    <div id="register_frame" ng-app="register" ng-controller="register_controller">
+        <b>Register</b>
+        <div id="register_valid_div" style="display: none; color: red">
+            <span>The requirements for registering cannot meet.</span>
+        </div>
+        <form method="post" action="/register">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th width="267" align="right">User Name:</th>
+                                    <td colspan="2" align="left"><input type="text" ng-model="username" ng-blur="username_exist()" name="username"/></td>
+                                    <td>
+                                        <div style="display: none" id="valid_username">Username has already exists.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Email:</th>
+                                    <td colspan="2" align="left"><input type="text" ng-model="email" ng-blur="email_valid()" name="email"/></td>
+                                    <td>
+                                        <div style="display: none" id="valid_email">Email is not valid.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Mobile Number:</th>
+                                    <td colspan="2" align="left"><input type="tel" ng-model="mobilenumber" ng-blur="mobilenumber_valid()" name="mobilenumber"/></td>
+                                    <td>
+                                        <div style="display: none" id="valid_mobilenumber">Mobile number is not valid.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Role:</th>
+                                    <td colspan="2" align="left">
+                                        <input type="radio" ng-model="role" name="role"/>User
+                                        <input type="radio" ng-model="role" name="role"/>Manager
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Gender:</th>
+                                    <td colspan="2" align="left">
+                                        <input type="radio" ng-model="gender" name="gender"/>Male
+                                        <input type="radio" ng-model="gender" name="gender"/>Female
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Birthday:</th>
+                                    <td colspan="2" align="left"><input type="date" ng-model="birthday" name="birthday"/></td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Password:</th>
+                                    <td colspan="2" align="left"><input type="password" ng-model="password" name="password"/></td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Confirm Password:</th>
+                                    <td colspan="2" align="left"><input type="password" ng-model="confirm" ng-blur="consistent()" name="confirm"/></td>
+                                    <td>
+                                        <div style="display: none" id="consistency">Password is not consistent with above.</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input type="Submit" ng-click="register()" value="Register" name="Submit"/>
+                            <input type="button" ng-click="reset()" value="Reset"/>
+                            <input type="button" onclick='location.href=("login")' value="Cancel"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+<script src='static/Mock/mock.js'></script>
+<script src="static/js/register.js"></script>

@@ -1,0 +1,26 @@
+#register_frame{
+    width: 680px;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #87CEFA;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+@keyframes mychange {
+    from{
+        width: 0;
+    } to {
+          width: 100px;
+    }
+}
+
+#valid_username.ng-hide{
+    animation: 0.5s mychange;
+}

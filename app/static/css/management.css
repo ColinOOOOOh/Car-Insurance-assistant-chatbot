@@ -1,0 +1,87 @@
+#table_frame{
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    align-items: center;
+}
+
+#frame{
+    width: 850px;
+    height: 400px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.button{
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    float: right;
+}
+
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    float: right;
+}
+
+.signout{
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    background: white;
+    float: right;
+}
+
+#popup{
+    display: none;
+    border: silver;
+    border-radius: 20px;
+    height: 40%;
+    width: 50%;
+    position: absolute;
+    top: 24%;
+    left: 24%;
+    z-index: 2;
+    background: white;
+    text-align: center;
+}
+
+#popup th{
+    align-items: right;
+    align-content: right;
+}
+
+#popover
+{
+    width: 100%;
+    height: 100%;
+    /*opacity:0.8;*/
+    /*filter:alpha(opacity=80);*/
+    /*display: none;*/
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}

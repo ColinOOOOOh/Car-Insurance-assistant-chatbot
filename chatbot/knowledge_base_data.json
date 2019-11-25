@@ -1,0 +1,108 @@
+{
+    "car_insurance": [
+        {
+            "id": 0,
+            "name": "glass insurance",
+            "coverage": "glass insurance coverage",
+            "duration": "5 years",
+            "price": "10000 dollars",
+	    "price_range": "cheap"
+	},
+	{
+            "id": 1,
+            "name": "traffic insurance",
+            "coverage": "traffic insurance coverage",
+            "duration": "6 years",
+            "price": "11000 dollars",
+	    "price_range": "cheap"
+        },
+	{
+            "id": 2,
+            "name": "engine insurance",
+            "coverage": "engine insurance coverage",
+            "duration": "7 years",
+            "price": "12000 dollars",
+	    "price_range": "medium"
+        },
+	{
+            "id": 3,
+            "name": "robber insurance",
+            "coverage": "robber insurance coverage",
+            "duration": "8 years",
+            "price": "14000 dollars",
+	    "price_range": "expensive"
+        }
+    ],
+    "hotel": [
+        {
+            "id": 0,
+            "name": "Hilton",
+            "price-range": "expensive",
+            "breakfast-included": true,
+            "city": "Berlin",
+            "free-wifi": true,
+            "star-rating": 5,
+            "swimming-pool": true
+        },
+        {
+            "id": 1,
+            "name": "Hilton",
+            "price-range": "expensive",
+            "breakfast-included": true,
+            "city": "Frankfurt am Main",
+            "free-wifi": true,
+            "star-rating": 4,
+            "swimming-pool": false
+        },
+        {
+            "id": 2,
+            "name": "B&B",
+            "price-range": "mid-range",
+            "breakfast-included": false,
+            "city": "Berlin",
+            "free-wifi": false,
+            "star-rating": 1,
+            "swimming-pool": false
+        },
+        {
+            "id": 3,
+            "name": "Berlin Wall Hostel",
+            "price-range": "cheap",
+            "breakfast-included": false,
+            "city": "Berlin",
+            "free-wifi": true,
+            "star-rating": 2,
+            "swimming-pool": false
+        },
+        {
+            "id": 4,
+            "name": "City Hotel",
+            "price-range": "expensive",
+            "breakfast-included": true,
+            "city": "Frankfurt am Main",
+            "free-wifi": true,
+            "star-rating": 3,
+            "swimming-pool": false
+        },
+        {
+            "id": 5,
+            "name": "Jugendherberge",
+            "price-range": "cheap",
+            "breakfast-included": true,
+            "city": "Berlin",
+            "free-wifi": false,
+            "star-rating": 2,
+            "swimming-pool": false
+        },
+        {
+            "id": 6,
+            "name": "Berlin Hotel",
+            "price-range": "mid-range",
+            "breakfast-included": true,
+            "city": "Berlin",
+            "free-wifi": true,
+            "star-rating": 3,
+            "swimming-pool": true
+        }
+    ]
+}

@@ -1565,3 +1565,51 @@ loading images
  'metadata': {'_continue': None,
               'resource_version': '1229077',
               'self_link': '/api/v1/namespaces/default/configmaps'}}
+list pod
+log
+[2019-03-04 03:20:15 +0000] [1] [INFO] Starting gunicorn 19.9.0
+[2019-03-04 03:20:15 +0000] [1] [INFO] Listening at: http://0.0.0.0:8888 (1)
+[2019-03-04 03:20:15 +0000] [1] [INFO] Using worker: gevent
+[2019-03-04 03:20:15 +0000] [8] [INFO] Booting worker with pid: 8
+[2019-03-04 03:20:15 +0000] [9] [INFO] Booting worker with pid: 9
+[2019-03-04 03:20:15 +0000] [10] [INFO] Booting worker with pid: 10
+[2019-03-04 03:20:15 +0000] [11] [INFO] Booting worker with pid: 11
+[2019-03-04 03:20:15 +0000] [12] [INFO] Booting worker with pid: 12
+
+loading images
+list pod
+list pod
+log
+[2019-03-04 03:37:33 +0000] [1] [INFO] Starting gunicorn 19.9.0
+[2019-03-04 03:37:33 +0000] [1] [INFO] Listening at: http://0.0.0.0:8888 (1)
+[2019-03-04 03:37:33 +0000] [1] [INFO] Using worker: gevent
+[2019-03-04 03:37:33 +0000] [8] [INFO] Booting worker with pid: 8
+[2019-03-04 03:37:33 +0000] [9] [INFO] Booting worker with pid: 9
+[2019-03-04 03:37:33 +0000] [10] [INFO] Booting worker with pid: 10
+[2019-03-04 03:37:33 +0000] [11] [INFO] Booting worker with pid: 11
+[2019-03-04 03:37:33 +0000] [12] [INFO] Booting worker with pid: 12
+
+log
+[2019-03-04 03:37:33 +0000] [1] [INFO] Starting gunicorn 19.9.0
+[2019-03-04 03:37:33 +0000] [1] [INFO] Listening at: http://0.0.0.0:8888 (1)
+[2019-03-04 03:37:33 +0000] [1] [INFO] Using worker: gevent
+[2019-03-04 03:37:33 +0000] [8] [INFO] Booting worker with pid: 8
+[2019-03-04 03:37:33 +0000] [9] [INFO] Booting worker with pid: 9
+[2019-03-04 03:37:33 +0000] [10] [INFO] Booting worker with pid: 10
+[2019-03-04 03:37:33 +0000] [11] [INFO] Booting worker with pid: 11
+[2019-03-04 03:37:33 +0000] [12] [INFO] Booting worker with pid: 12
+
+loading images
+list pod
+log
+[2019-03-04 03:37:33 +0000] [1] [INFO] Starting gunicorn 19.9.0
+[2019-03-04 03:37:33 +0000] [1] [INFO] Listening at: http://0.0.0.0:8888 (1)
+[2019-03-04 03:37:33 +0000] [1] [INFO] Using worker: gevent
+[2019-03-04 03:37:33 +0000] [8] [INFO] Booting worker with pid: 8
+[2019-03-04 03:37:33 +0000] [9] [INFO] Booting worker with pid: 9
+[2019-03-04 03:37:33 +0000] [10] [INFO] Booting worker with pid: 10
+[2019-03-04 03:37:33 +0000] [11] [INFO] Booting worker with pid: 11
+[2019-03-04 03:37:33 +0000] [12] [INFO] Booting worker with pid: 12
+
+list pod
+loading images
