@@ -42,7 +42,11 @@ class user(db.Model):
     pwd = db.Column(db.String(32), nullable=False, unique=False)
     image = db.Column(db.String(120), nullable=False, unique=False)
 
-    roleid = db.Column(db.String(15), nullable=False, unique=False)
+    occupation = db.Column(db.String(120), nullable=False, unique=False)
+    age = db.Column(db.String(120), nullable=False, unique=False)
+    car_model = db.Column(db.String(120), nullable=False, unique=False)
+    prev_accidents = db.Column(db.String(120), nullable=False, unique=False)
+
 
     # roleid = db.Column(db.Integer,db.ForeignKey('role.roleid'))
 
@@ -114,6 +118,7 @@ class detail_insurance(db.Model):
     duration = db.Column(db.String(20), nullable=False, unique=False)
     price = db.Column(db.String(200), nullable=False, unique=False)
     price_range = db.Column(db.String(200), nullable=False, unique=False)
+    date = db.Column(db.String(40), nullable=False, unique=False)
 
 
 
@@ -123,8 +128,8 @@ class car_insurance(db.Model):
     name = db.Column(db.String(20), nullable=False, unique=False)
     coverage = db.Column(db.String(20), nullable=False, unique=False)
     duration = db.Column(db.String(20), nullable=False, unique=False)
-    price = db.Column(db.String(200), nullable=False, unique=False)
-    price_range = db.Column(db.String(200), nullable=False, unique=False)
+    price = db.Column(db.String(20), nullable=False, unique=False)
+    price_range = db.Column(db.String(20), nullable=False, unique=False)
 
 
 class claim(db.Model):
@@ -135,4 +140,11 @@ class claim(db.Model):
     description = db.Column(db.String(120), nullable=False, unique=False)
     date = db.Column(db.String(40), nullable=False, unique=False)
     state = db.Column(db.String(30), nullable=False, unique=False)
+
+class description(db.Model):
+    __tablename__ = 'description'
+    id = db.Column(db.Integer,primary_key=True)
+    name = db.Column(db.String(20), nullable=False, unique=False)
+    description = db.Column(db.String(200), nullable=False, unique=False)
+
 db.create_all()

@@ -1,0 +1,14 @@
+#insurance_frame{
+    width: 680px;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #87CEFA;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}

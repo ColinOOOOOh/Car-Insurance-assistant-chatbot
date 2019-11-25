@@ -2,10 +2,12 @@ var popup = document.getElementById('popup');
 var main = document.getElementById('popover');
 var insurance_bar = document.getElementById('insurance_bar');
 var edit_button = document.getElementById('multi_btn');
+var userid = document.getElementById('userid').value;
 
 function show() {
     popup.style.display = "block";
     document.body.style.backgroundColor = "silver";
+    document.getElementById('multi_btn').type = "button";
     document.getElementById('edit_btn').style.display = "none";
     edit_button.style.display = "block";
     insurance_bar.innerText = "Add Insurance";
@@ -18,9 +20,26 @@ function cancel() {
 }
 
 angular.module('management', [])
-    .controller('management_controller', function ($scope, $http){
+    .controller('management_controller', function ($scope, $http, $window){
         //Insurance information
         $scope.insurance_info = [];
+
+        //Onload function.
+        $window.onload = function(){
+            var data = {"userid": userid};
+            $http({
+                method: 'POST',
+                url: 'get_management_info',
+                data: data
+            }).then(function (response) {
+                $scope.insurance_info = response.data.result;
+            });
+        };
+
+        //Transfer to chatbot.
+        $scope.to_chatbot = function(){
+            window.location = "Main.html";
+        };
 
         //Add information.
         $scope.add_info = function ($index) {
@@ -75,6 +94,7 @@ angular.module('management', [])
             //Retrieve the value.
             var value = $scope.insurance_info[$index];
             $scope.insurance_index = $index;
+            $scope.insurance_id = value.insurance_id;
             $scope.insurance_name = value.insurance_name;
             $scope.company = value.company;
             $scope.business_name = value.business_name;
@@ -91,7 +111,7 @@ angular.module('management', [])
             var business_name = $scope.business_name;
             var insurance_description = $scope.insurance_description;
             var business_description = $scope.business_description;
-            var value = document.getElementById('multi_btn').value;
+            //var value = document.getElementById('multi_btn').value;
 
             //Clear contents
             $scope.insurance_name = "";
@@ -127,15 +147,17 @@ angular.module('management', [])
 
         //Delete insurance information.
         $scope.delete = function($index){
-            alert($index);
-            var insurance_id = $scope.insurance_id;
+            var insurance_id = $scope.insurance_info[$index].insurance_id;
             var data = {
                 "insurance_id": insurance_id
             };
             $http({
                 method: "DELETE",
                 url: "https://320ace37-48b8-480a-aef2-0d1ea71f5f40.mock.pstmn.io/remove_insurance_info",
-                data: data
+                data: data,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             }).then(function (response) {
                 var res_data = response.data.result;
                 if(res_data == 'yes'){

@@ -8,19 +8,16 @@
 </head>
 <body>
 <div id="profile_frame" ng-app="profile" ng-controller="profile_controller">
-    <b>Profile</b>
+    <b id="title">Profile</b>
     <div id="edit_valid_div" style="display: none; color: red">
         <span>The requirements for editing cannot meet.</span>
     </div>
-    <form method="post">
+    <form method="post" action="/edit_personal_info">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tbody>
             <tr>
                 <table>
                     <tbody>
-                    <tr>
-                        <img class="img" id="icon" ng-click="change_icon()" src="static/picture/me.PNG"/>
-                    </tr>
                     <tr>
                         <th align="right">
                             <input align="center" type="file" id="icon_frame" style="display: none; width: 160px" name="upload_img"/>
@@ -31,43 +28,43 @@
                     </tr>
                     <tr>
                         <th width="267" align="right">User Name:</th>
-                        <td colspan="2" align="left"><input type="text" ng-model="username" name="username"/></td>
+                        <td colspan="2" align="left"><input type="text" class="input" ng-model="username" name="username"/></td>
                     </tr>
                     <tr>
                         <th width="267" align="right">Email:</th>
                         <td colspan="2" align="left">
-                            <input type="text" ng-model="email" ng-blur="email_valid()" name="email"/>
+                            <input type="text" class="input" ng-model="email" ng-blur="email_valid()" name="email"/>
                         </td>
                         <td>
-                            <div style="display: none" id="valid_email">Email is not valid.</div>
+                            <div style="display: none" class="slide" id="valid_email">Email is not valid.</div>
                         </td>
                     </tr>
                     <tr>
                         <th width="267" align="right">Mobile Number:</th>
-                        <td colspan="2" align="left"><input type="tel" ng-model="mobilenumber" ng-blur="mobilenumber_valid()" name="mobilenumber"/></td>
+                        <td colspan="2" align="left"><input type="tel" class="input" ng-model="mobilenumber" ng-blur="mobilenumber_valid()" name="mobilenumber"/></td>
                         <td>
-                            <div style="display: none" id="valid_mobilenumber">Mobile number is not valid.</div>
+                            <div style="display: none" class="slide" id="valid_mobilenumber">Mobile number is not valid.</div>
                         </td>
                     </tr>
                     <tr>
                         <th width="267" align="right">Gender:</th>
                         <td colspan="2" align="left">
-                            <input type="radio" ng-model="gender" name="gender"/>Male
-                            <input type="radio" ng-model="gender" name="gender"/>Female
+                            <input type="radio" ng-model="gender" value="1" name="gender" checked="checked"/>Male
+                            <input type="radio" ng-model="gender" value="2" name="gender"/>Female
                         </td>
                     </tr>
                     <tr>
                         <th width="267" align="right">Birthday:</th>
-                        <td colspan="2" align="left"><input type="date" ng-model="birthday" name="birthday"/></td>
+                        <td colspan="2" align="left"><input type="date" class="input" ng-model="birthday" name="birthday"/></td>
                     </tr>
                     </tbody>
                 </table>
             </tr>
             <tr>
                 <td align="center">
-                    <input type="button" ng-click="edit()" value="Edit"/>
-                    <input type="button" ng-click="reset()" value="Reset"/>
-                    <input type="button" ng-click="transfer()" value="Cancel"/>
+                    <input type="submit" ng-click="edit()" class="button" value="Edit"/>
+                    <input type="button" ng-click="reset()" class="button" value="Reset"/>
+                    <input type="button" onclick='location.href=("get_management_info")' class="button" value="Cancel"/>
                 </td>
             </tr>
             </tbody>

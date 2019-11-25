@@ -5,27 +5,32 @@
     <title>Dialog</title>
     <script type="text/javascript" src="static/angular-1.7.8/angular.js"></script>
     <link rel="stylesheet" type="text/css" href="static/css/dialogue.css"/>
+    <script src="static/js/management.js"></script>
 </head>
-<body>
+<body style="background-image: url('./static/picture/call.jpg'); background-size: cover">
 <div ng-app="dialog" ng-controller="dialog_controller">
+    <div style="float: right">
+        <a onclick='location.href=("get_management_info")'>My Insurance</a>
+        <a onclick='location.href=("insurance_m")'>My Claim</a>
+    </div>
     <table id="dialog_frame">
         <tbody>
         <tr>
             <td>
                 <div id="frame">
-                    <b>Chatbot</b>
+                    <b id="title">Chatbot</b>
                     <table align="center">
                         <tr>
                             <td>
                                 <div id="container">
                                     <div id="content">
                                         <div id="scroll">
-                                            <ul id="save"></ul>
+                                            <ul id="save" style="overflow-y: auto"></ul>
                                         </div>
                                     </div>
                                     <div id="edit">
-                                        <img src="static/picture/me.PNG" id="Img"/>
-                                        <input type="text" name="input" ng-model="requestMsg" title="Please input content." style="border-radius: 5px" id="txt"/>
+                                        <input type="text" name="input" ng-model="requestMsg" ng-keypress="($event.which == 13) ? send_msg_key(): 0" placeholder="Please input content." style="border-radius: 5px" id="txt"/>
+                                        <input type="hidden" id="userid" value="{{userid}}"/>
                                         <input type="button" name="send" ng-click="send_msg()" value="Send" id="btn"/>
                                     </div>
                                 </div>
@@ -37,12 +42,31 @@
         </tr>
         <tr>
             <td align="center">
-                <img id="ad_frame" src="static/picture/Sydney.jpg"/>
+                <img src="{{ url_for('static', filename='picture/Sydney.jpg')}}" width="640px" height="125px" style="border-radius: 20px" />
             </td>
         </tr>
         </tbody>
     </table>
 </div>
-<script src="static/js/dialog.js"></script>
 </body>
 </html>
+<script src="static/js/dialog.js"></script>
+<script language="JavaScript">
+    var curIndex = 0;
+    var timeInterval = 1000;
+    var arr = new Array();
+
+    arr[0] = "{{ url_for('static', filename='picture/Sydney.jpg')}}";
+    arr[1] = "{{ url_for('static', filename='picture/audi.jpg')}}";
+    setInterval(changeImg, timeInterval);
+
+    function  changeImg() {
+        var img = document.getElementById("ad_frame");
+        if(curIndex == arr.length - 1){
+            curIndex = 0;
+        }else{
+            curIndex += 1;
+        }
+        img.src = arr[curIndex];
+    }
+</script>

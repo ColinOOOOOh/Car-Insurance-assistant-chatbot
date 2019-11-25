@@ -34,6 +34,13 @@
 * query_insurance_with_price{"price_range":"cheap"}
   - action_query_insurance_with_price
 
+## search insurance with price range = cheap 4
+* greet
+  - utter_greet
+* query_insurance_with_price{"price_range":"cheap"}
+  - action_query_insurance_with_price
+* goodbye
+  -  utter_goodbye
 
 ## search insurance with price range = medium
 * greet
@@ -51,12 +58,46 @@
 * goodbye
   - utter_goodbye
 
+
+## search insurance with price range = expensive 2
+* query_insurance_with_price{"price_range":"expensive"}
+  - action_query_insurance_with_price
+
+## search insurance with price range = expensive 3
+* query_insurance_with_price{"price_range":"expensive"}
+  - action_query_insurance_with_price
+* goodbye
+  - utter_goodbye
+
+## search with name
+* greet
+  - utter_greet
+* query_insurance_with_name{"car_insurance":"glass insurance"}
+  - action_query_insurance_with_name
+* goodbye
+  - utter_goodbye
+
+## search with name
+* query_insurance_with_name{"car_insurance":"theft insurance"}
+  - action_query_insurance_with_name
+
+
+## search with nam 2e
+* query_insurance_with_name{"car_insurance":"engine insurance"}
+  - action_query_insurance_with_name
+
+## search with nam 3
+* query_insurance_with_name{"car_insurance":"traffic insurance"}
+  - action_query_insurance_with_name
+
+
+
 ## buy_insurance 1
 * greet
   - utter_greet
 * buy_insurance
   - utter_ask_name
-* inform{"name": "glass insurance"}
+* inform{"car_insurance": "glass insurance"}
   - utter_ask_duration
 * inform{"duration": "3 years"}
   - utter_ask_coverage
@@ -71,7 +112,7 @@
   - utter_greet
 * buy_insurance
   - utter_ask_name
-* inform{"name": "robber insurance"}
+* inform{"car_insurance": "robber insurance"}
   - utter_ask_duration
 * inform{"duration": "5 years"}
   - utter_ask_coverage
@@ -85,7 +126,7 @@
   - utter_greet
 * buy_insurance
   - utter_ask_name
-* inform{"name": "glass insurance"}
+* inform{"car_insurance": "glass insurance"}
   - utter_ask_duration
 * inform{"duration": "10 years"}
   - utter_ask_coverage
@@ -99,7 +140,7 @@
   - utter_greet
 * buy_insurance
   - utter_ask_name
-* inform{"name": "engine insurance"}
+* inform{"car_insurance": "engine insurance"}
   - utter_ask_duration
 * inform{"duration": "5 years"}
   - utter_ask_coverage
@@ -113,7 +154,7 @@
   - utter_greet
 * buy_insurance
   - utter_ask_name
-* inform{"name": "engine insurance"}
+* inform{"car_insurance": "engine insurance"}
   - utter_ask_duration
 * inform{"duration": "3 years"}
   - utter_ask_coverage
@@ -127,7 +168,7 @@
   - utter_greet
 * buy_insurance
   - utter_ask_name
-* inform{"name": "glass insurance"}
+* inform{"car_insurance": "glass insurance"}
   - utter_ask_duration
 * inform{"duration": "10 years"}
   - utter_ask_coverage
@@ -141,7 +182,7 @@
   - utter_greet
 * buy_insurance
   - utter_ask_name
-* inform{"name": "glass insurance"}
+* inform{"car_insurance": "glass insurance"}
   - utter_ask_duration
 * inform{"duration": "10 years"}
   - utter_ask_coverage
@@ -156,7 +197,7 @@
 * inform{"iid": "iid 02"}
   - utter_ask_what_happen
 * inform{"description": "My car is broken"}
-  - action_claim
+  - action_make_claim
 
 ## claim 2
 * make_claim
@@ -164,7 +205,7 @@
 * inform{"iid": "iid 01"}
   - utter_ask_what_happen
 * inform{"description": "My car glass is broken"}
-  - action_claim
+  - action_make_claim
 
 ## claim 3
 * make_claim
@@ -172,7 +213,7 @@
 * inform{"iid": "iid 03"}
   - utter_ask_what_happen
 * inform{"description": "I hit a tree"}
-  - action_claim
+  - action_make_claim
 
 ## claim 4
 * make_claim
@@ -180,7 +221,7 @@
 * inform{"iid": "iid 01"}
   - utter_ask_what_happen
 * inform{"description": "My engine doesn't work"}
-  - action_claim
+  - action_make_claim
 
 ## claim 5
 * make_claim
@@ -188,7 +229,7 @@
 * inform{"iid": "insurance id 032"}
   - utter_ask_what_happen
 * inform{"description": "My engine is broken"}
-  - action_claim
+  - action_make_claim
 
 ## claim 6
 * make_claim
@@ -196,7 +237,7 @@
 * inform{"iid": "iid 05"}
   - utter_ask_what_happen
 * inform{"description": "My car was stolen"}
-  - action_claim
+  - action_make_claim
 
 ## claim 7
 * make_claim
@@ -204,7 +245,7 @@
 * inform{"iid": "iid 05"}
   - utter_ask_what_happen
 * inform{"description": "My car is crashed"}
-  - action_claim
+  - action_make_claim
 
 ## claim 8
 * make_claim
@@ -212,7 +253,7 @@
 * inform{"iid": "iid 09"}
   - utter_ask_what_happen
 * inform{"description": "My car was damaged"}
-  - action_claim
+  - action_make_claim
 
 ## set uid 1
 * set_uid
@@ -244,3 +285,6 @@
 * goodbye
 - utter_goodbye
 
+## what can i do
+* ask_what_can_i_do
+  - utter_what_can_i_do

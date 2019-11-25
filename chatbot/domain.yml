@@ -12,6 +12,7 @@ intents:
   - restart
   - make_claim
   - set_uid
+  - ask_what_can_i_do
 
 entities:
   - object_type
@@ -71,8 +72,8 @@ actions:
 - utter_restart
 - utter_ask_id
 - utter_ask_what_happen
-- action_claim
 - action_set_uid
+- utter_what_can_i_do
 
 templates:
   utter_greet:
@@ -113,3 +114,6 @@ templates:
     
   utter_ask_what_happen:
   - text: "Could you tell me what happended?"
+
+  utter_what_can_i_do:
+  - text: "You can ask me something about car insurance, or even buy insurance and make claim here!"
