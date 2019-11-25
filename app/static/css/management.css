@@ -19,10 +19,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: orange;
+    /*background-color: orange;*/
     border-radius: 20px;
     text-align: center;
     align-items: center;
+    margin-left: 300px;
+    margin-top: 130px;
 }
 
 .button{
@@ -34,6 +36,9 @@
     right: 0;
     bottom: 0;
     float: right;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 10px;
 }
 
 .profile{
@@ -41,6 +46,7 @@
     height: 40px;
     border-radius: 20px;
     float: right;
+    background: grey;
 }
 
 .signout{
@@ -50,7 +56,7 @@
     display: -webkit-box;
     -webkit-box-align: center;
     -webkit-box-pack: center;
-    background: white;
+    /*background: white;*/
     float: right;
 }
 
@@ -84,4 +90,37 @@
     top:0;
     left:0;
     z-index:1;
+}
+
+#title{
+    width:5em;
+    font-size:280%;
+    font-family:algerian,courier;
+    line-height:80%;
+    color: #080808;
+}
+
+table
+{
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+}
+table td, table th
+{
+    color: #666;
+    height: 30px;
+}
+table thead th
+{
+    background-color: #CCE8EB;
+    width: 100px;
+}
+table tr:nth-child(odd)
+{
+    /*background: #fff;*/
+}
+table tr:nth-child(even)
+{
+    background: #F5FAFA;
 }

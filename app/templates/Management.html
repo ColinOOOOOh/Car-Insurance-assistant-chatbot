@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Contents Management</title>
-    <script type="text/javascript" src="angular-1.7.8/angular.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/management.css"/>
+    <script type="text/javascript" src="static/angular-1.7.8/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/management.css"/>
 </head>
-<body>
+<body style="background-image: url('./static/picture/management.png'); background-size: cover">
 <div ng-app="management" ng-controller="management_controller">
     <div id="popup">
         <b id="insurance_bar">Add Insurance</b>
@@ -49,43 +49,44 @@
         </table>
     </div>
     <div id="popover">
-        <div ng-click="sign_out()" class="signout">
+        <div onclick='location.href=("sign_out")' class="signout">
             <b>Sign Out</b>
         </div>
-        <img class="profile" ng-click="to_profile()" src="picture/icon.PNG"/>
+        <img class="profile" onclick='location.href=("edit_personal_info")' src="static/picture/icon.PNG"/>
         <table id="table_frame">
             <tbody>
             <tr>
                 <td>
                     <div id="frame">
-                        <b>Insurance Management</b>
+                        <b id="title">Insurance Management</b>
                         <table border="1" cellpadding="0" cellspacing="0" width="100%" style=" border-collapse: collapse; background: white">
                             <tr>
+                                <th>Insurance id</th>
                                 <th>Insurance Name</th>
-                                <th>Company</th>
-                                <th>Business Name</th>
-                                <th>Insurance Description</th>
-                                <th>Business Description</th>
-                                <th></th>
-                                <th></th>
+                                <th>Coverage</th>
+                                <th>Duration</th>
+                                <th>Price</th>
+                                <th>Date</th>
                             </tr>
+                            {% raw %}
                             <tr ng-repeat="info in insurance_info">
                                 <td style="display: none">{{ $index }}</td>
+                                <td>{{ info.insurance_id }}</td>
                                 <td>{{ info.insurance_name }}</td>
-                                <td>{{ info.company }}</td>
-                                <td>{{ info.business_name }}</td>
-                                <td>{{ info.insurance_description }}</td>
-                                <td>{{ info.business_description }}</td>
-                                <td><img src="picture/remove.png" ng-click="delete($index)" style="width: 25px; height: 25px"/></td>
-                                <td><img src="picture/note.png" ng-click="edit($index)" style="width: 25px; height: 25px"/></td>
+                                <td>{{ info.coverage }}</td>
+                                <td>{{ info.duration }}</td>
+                                <td>{{ info.price }}</td>
+                                <td>{{ info.date }}</td>
                             </tr>
+                            {% endraw %}
                         </table>
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td align="right">
-                    <input class="button" type="button" onclick="show()" value="Add" name="add"/>
+            <tr style="background: transparent">
+                <td align="right" style="background: transparent">
+                    <input type="hidden" id="userid" value= {{userid}} />
+                    <input class="button" type="button" onclick='location.href=("main")' value="Chatbot" name="Chatbot"/>
                 </td>
             </tr>
             </tbody>
@@ -94,4 +95,4 @@
 </div>
 </body>
 </html>
-<script src="js/management.js"></script>
+<script src="static/js/management.js"></script>

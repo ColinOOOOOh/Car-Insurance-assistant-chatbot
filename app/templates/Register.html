@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript" src="static/angular-1.7.8/angular.js"></script>
-    <script src="static/Mock/mock.js"></script>
+    <script src="Mock/mock.js"></script>
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="static/css/register.css"/>
 </head>
 <body>
     <div id="register_frame" ng-app="register" ng-controller="register_controller">
-        <b>Register</b>
+        <b id="title">Register</b>
         <div id="register_valid_div" style="display: none; color: red">
-            <span>The requirements for registering cannot meet.</span>
+            <b class="slide">The requirements for registering cannot meet.</b>
         </div>
         <form method="post" action="/register">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -21,52 +21,81 @@
                             <tbody>
                                 <tr>
                                     <th width="267" align="right">User Name:</th>
-                                    <td colspan="2" align="left"><input type="text" ng-model="username" ng-blur="username_exist()" name="username"/></td>
+                                    <td colspan="2" align="left"><input type="text" class="input" ng-model="username" ng-blur="username_exist()" name="username"/></td>
                                     <td>
-                                        <div style="display: none" id="valid_username">Username has already exists.</div>
+                                        <div style="display: none" id="valid_username"><b class="slide">Username has already existed.</b></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th width="267" align="right">Email:</th>
-                                    <td colspan="2" align="left"><input type="text" ng-model="email" ng-blur="email_valid()" name="email"/></td>
+                                    <td colspan="2" align="left"><input type="text" class="input" ng-model="email" ng-blur="email_valid()" name="email"/></td>
                                     <td>
-                                        <div style="display: none" id="valid_email">Email is not valid.</div>
+                                        <div style="display: none" id="valid_email"><b class="slide">Email is not valid.</b></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th width="267" align="right">Mobile Number:</th>
-                                    <td colspan="2" align="left"><input type="tel" ng-model="mobilenumber" ng-blur="mobilenumber_valid()" name="mobilenumber"/></td>
+                                    <td colspan="2" align="left"><input type="tel" class="input" ng-model="mobilenumber" ng-blur="mobilenumber_valid()" name="mobilenumber"/></td>
                                     <td>
-                                        <div style="display: none" id="valid_mobilenumber">Mobile number is not valid.</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th width="267" align="right">Role:</th>
-                                    <td colspan="2" align="left">
-                                        <input type="radio" ng-model="role" name="role"/>User
-                                        <input type="radio" ng-model="role" name="role"/>Manager
+                                        <div style="display: none" id="valid_mobilenumber"><b class="slide">Mobile number is not valid.</b></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th width="267" align="right">Gender:</th>
                                     <td colspan="2" align="left">
-                                        <input type="radio" ng-model="gender" name="gender"/>Male
-                                        <input type="radio" ng-model="gender" name="gender"/>Female
+                                        <input type="radio" ng-model="gender" name="gender" ng-value="1" checked="checked"/>Male
+                                        <input type="radio" ng-model="gender" name="gender" ng-value="2"/>Female
                                     </td>
                                 </tr>
                                 <tr>
                                     <th width="267" align="right">Birthday:</th>
-                                    <td colspan="2" align="left"><input type="date" ng-model="birthday" name="birthday"/></td>
+                                    <td colspan="2" align="left"><input type="date" class="input" ng-model="birthday" ng-blur="calculateAge()" name="birthday"/></td>
+                                </tr>
+                                <tr>
+                                    <input type="hidden" id="age" name="age" ng-model="age"/>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Occupation:</th>
+                                    <td colspan="2" align="left">
+                                        <select name="occupation" ng-model="occupation" class="input" style="width: 94.5%">
+                                            <option>Commercial Driver</option>
+                                            <option>Student</option>
+                                            <option>Engineer</option>
+                                            <option>Cashier</option>
+                                            <option>Trump Support</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Car Model:</th>
+                                    <td colspan="2" align="left">
+                                        <select name="car_model" ng-model="car_model" class="input" style="width: 94.5%">
+                                            <option>Corvette C</option>
+                                            <option>Mercedes Benz E</option>
+                                            <option>BMW E</option>
+                                            <option>Toyota Camry</option>
+                                            <option>Honda Accord</option>
+                                            <option>Ford F</option>
+                                            <option>Toyota Corolla</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="267" align="right">Previous Accidents:</th>
+                                    <td colspan="2" align="left">
+                                        <input type="text" class="input" ng-model="previous_accidents" name="previous_accidents"/>
+                                    </td>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th width="267" align="right">Password:</th>
-                                    <td colspan="2" align="left"><input type="password" ng-model="password" name="password"/></td>
+                                    <td colspan="2" align="left"><input type="password" class="input" ng-model="password" name="password"/></td>
                                 </tr>
                                 <tr>
                                     <th width="267" align="right">Confirm Password:</th>
-                                    <td colspan="2" align="left"><input type="password" ng-model="confirm" ng-blur="consistent()" name="confirm"/></td>
+                                    <td colspan="2" align="left"><input type="password" class="input" ng-model="confirm" ng-blur="consistent()" name="confirm"/></td>
                                     <td>
-                                        <div style="display: none" id="consistency">Password is not consistent with above.</div>
+                                        <div style="display: none" id="consistency"><b class="slide">Password is not consistent with above.</b></div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -74,9 +103,9 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <input type="Submit" ng-click="register()" value="Register" name="Submit"/>
-                            <input type="button" ng-click="reset()" value="Reset"/>
-                            <input type="button" onclick='location.href=("login")' value="Cancel"/>
+                            <input type="submit" ng-click="register()" class="button white" value="Register"/>
+                            <input type="button" ng-click="reset()" class="button white" value="Reset"/>
+                            <input type="button" onclick='location.href=("login")' class="button white" value="Cancel"/>
                         </td>
                     </tr>
                 </tbody>
@@ -85,5 +114,4 @@
     </div>
 </body>
 </html>
-<script src='static/Mock/mock.js'></script>
 <script src="static/js/register.js"></script>

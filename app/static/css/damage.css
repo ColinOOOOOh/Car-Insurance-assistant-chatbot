@@ -1,0 +1,50 @@
+.whole{
+    width: 300px;
+    float: left;
+}
+
+.claim{
+    color: transparent;
+    background-color : red;
+    text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+    -webkit-background-clip : text;
+    float: left;
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.text_frame{
+    width: 200px;
+    height: 80px;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 30px;
+    color: #FF9900;
+}
+
+.list_frame{
+    width: 280px;
+    height: 125px;
+    float: right;
+    background: #fff;
+    margin-top: 0px;
+    margin-right: 25px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    padding: 0;
+}
+
+.design{
+    padding:4px;
+    margin: 0;
+    overflow: hidden;
+}
+
+a{
+    line-height: 20px;
+    padding: 4px;
+    background-color: #f6f4f0;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #efefef;
+    color: #000;
+}

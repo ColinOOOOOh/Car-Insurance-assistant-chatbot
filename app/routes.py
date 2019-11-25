@@ -1,10 +1,15 @@
 from app import app
 from flask import render_template,request,session
-from app.__init__ import user,db,insurance,detail_insurance,car_insurance,claim
+from app.__init__ import user,db,insurance,detail_insurance,car_insurance,claim,description
 import json
 import time
 import requests
-
+import datetime
+import sys
+# from app.recommend_insurance import RecommendInsurance,Insurance,UserFeatures
+# from app.kb import KnowledgeBase
+# sys.path.append('../chatbot/kb/recommend_insurance.py')
+# from ../chatbot/kb/recommend_insurance
 
 
 global userdeid
@@ -20,15 +25,13 @@ def login():
     if request.method =="POST":
 
 
-        username = request.form.get('username')
+        username = request.form.get('User')
         passwd = request.form.get('password')
-
+        print(username,passwd)
         # print(username, passwd)
         a = user.query.filter(user.username == username, user.pwd == passwd).all()
-        # print('aaaaaaaaaa',a[0].userid)
 
         if a:
-
             global userdeid
             userdeid = a[0].userid
             session['userdeid']=userdeid
@@ -40,7 +43,6 @@ def login():
             print(userdeid)
             return render_template('Main.html', userid=a[0].userid)
         else:
-            # print('no')
             return render_template('Login.html')
     if request.method =="GET":
         return render_template('Login.html')
@@ -84,27 +86,34 @@ def regist():
         passwd = request.form.get("password")
 
 
-        roleid = request.values.get("role")
-        print(roleid,'++++++++++++++++++++++++++')
         gender = request.values.get("gender")
         print(gender,'++++++++++++++++++++++++++')
         birthday = request.form.get("birthday")
         email = request.form.get("email")
         telephone = request.form.get("mobilenumber")
 
-        if username==None or passwd==None or roleid ==None or gender==None or birthday==None or email==None or telephone==None:
+        occupation=request.form.get("occupation")
+        age=request.form.get("age")
+        car_model=request.form.get("car_model")
+        prev_accidents=request.form.get("previous_accidents")
+
+        cur_time = datetime.datetime.now().year
+        # for i in
+        print(cur_time)
+        if username==None or passwd==None or gender==None or birthday==None or email==None \
+                or telephone==None or occupation ==None or occupation==age or car_model==None or prev_accidents==None:
             return render_template(('Register.html'))
 
 
 
 
 
-        # 先查询。在插入或删除或更新
         a = user.query.filter(user.username == username,user.email==email,user.gender==gender,
                               user.birthday==birthday,user.telephone==telephone).all()
         if len(a) == 0:
             me = user(username=username, email=email, birthday=birthday, gender=gender,
-                      telephone=telephone, pwd=passwd, roleid=roleid,image = 'None')
+                      telephone=telephone, pwd=passwd, image = 'None',occupation=occupation,age=age,prev_accidents=prev_accidents,
+                      car_model=car_model)
             db.session.add(me)
             db.session.commit()
 
@@ -116,8 +125,10 @@ def regist():
 @app.route('/username_exist',methods = ['GET'])
 def username_exit():
     username = request.values.get('username')
-    print('usernanme ----------------------------------',username)
-    if len(username)<4:
+    # print('usernanme ----------------------------------',username)
+    c = user.query.filter(user.username == username).all()
+
+    if len(c)!=0:
         data = {
             'result': 'no',
         }
@@ -147,23 +158,23 @@ def email_exit():
         jstr = json.dumps(data)
         return jstr
 
-@app.route('/mobilenumber_exit',methods = ['GET','POST'])
-def mobilenumber_exit():
-    telephone = request.values.get('mobile_number')
-    # a = user.query.filter(user.telephone == telephone).all()
-
-    if len(telephone)!=0 and telephone.isdigit():
-        data = {
-            'result': 'yes',
-        }
-        jstr = json.dumps(data)
-        return jstr
-    else:
-        data = {
-            'result': 'no',
-        }
-        jstr = json.dumps(data)
-        return jstr
+# @app.route('/mobilenumber_exit',methods = ['GET','POST'])
+# def mobilenumber_exit():
+#     telephone = request.values.get('mobile_number')
+#     # a = user.query.filter(user.telephone == telephone).all()
+#
+#     if len(telephone)!=0 and telephone.isdigit():
+#         data = {
+#             'result': 'yes',
+#         }
+#         jstr = json.dumps(data)
+#         return jstr
+#     else:
+#         data = {
+#             'result': 'no',
+#         }
+#         jstr = json.dumps(data)
+#         return jstr
 
 #需要加上从数据库获取用户名，但目前不影响功能
 @app.route('/answer_question',methods = ['GET','POST'])
@@ -198,6 +209,8 @@ def chat(message):
                 bot_message = i['text']
                 responses.append(bot_message)
                 print(f"{i['text']}")
+        if responses==[]:
+            responses.append("Sorry, could you rephrase again?")
         return responses
 
 @app.route('/edit_personal_info',methods = ['GET','POST'])
@@ -246,7 +259,7 @@ def edit_personal_info():
             return render_template('Management.html')
 
 @app.route('/check_telephone_number',methods = ['GET','POST'])
-def check_telephone():
+def check_telephone_number():
     telephone = request.values.get('mobile_number')
     if telephone.isdigit() and len(telephone)==10:
         if telephone[:2]=='04':
@@ -350,6 +363,7 @@ def get_management_info():
     global userdeid
     # userid = userdeid
     userid = session.get('userdeid')
+    print('asdasdasdad',userid)
     if request.method=='GET':
         return render_template('Management.html')
     if request.method == 'POST':
@@ -364,7 +378,8 @@ def get_management_info():
                 "coverage" : i.coverage,
                 "duration" : i.duration,
                 "price" : i.price,
-                "price_range" : i.price_range
+                "price_range" : i.price_range,
+                "date":i.date
             }
             result.append(data)
 
@@ -426,6 +441,9 @@ def chat_bot():
     return msg
 
 def insurance_list():
+    # insurances = RecommendInsurance(KnowledgeBase("kb.pl"),
+    #                                 UserFeatures("engineer", 32, "toyota_corolla", 1))
+    # print('asdasdasdasdasdasdasdasdas',insurances)
     car_insurance_list = car_insurance.query.filter().all()
     print(len(car_insurance_list))
     result = []
@@ -468,19 +486,17 @@ def query_insurance_with_price(price):
 
 def query_insurance_with_name(name):
 
-    car_insurance_list = car_insurance.query.filter(car_insurance.name==name).all()
-    print(len(car_insurance_list))
+    car_insurance_list = description.query.filter(description.name==name).all()
     result = []
+    l = []
     for i in car_insurance_list:
-        data = {
-            "id":i.id,
-            "name":i.name,
-            "coverage":i.coverage,
-            "duration":i.duration,
-            "price":i.price,
-            "price_range":i.price_range
-        }
-        result.append(data)
+        if i.description not in l:
+            data = {
+                "description":i.description
+            }
+            result.append(data)
+            l.append(i.description)
+            
     data = {
         "car_insurance": result
     }
@@ -523,10 +539,12 @@ def buy_ins():
 
     jsons = request.get_json()
     userid = jsons['uid']
+    print(userid)
     name = jsons['name']
     coverage = jsons['coverage']
     duration = jsons['duration']
     print('buy_ins-----------buy_ins-----------buy_ins-----------buy_ins-----------buy_ins-----------',userid)
+    localtime = time.asctime(time.localtime(time.time()))
 
     c = car_insurance.query.filter(car_insurance.name == name,car_insurance.coverage==coverage,
                                    car_insurance.duration==duration).all()
@@ -534,7 +552,7 @@ def buy_ins():
     price_range = c[0].price_range
     insurance = c[0].id
     me = detail_insurance(insurance=insurance,userid=userid,name=name, duration=duration,coverage=coverage
-                   ,price=price,price_range=price_range)
+                   ,price=price,price_range=price_range,date = localtime)
 
 
 
@@ -562,30 +580,31 @@ def sign_out():
     return render_template('Login.html')
 
 #
-# @app.route('/order',methods = ['GET','POST'])
-# def order():
-#     global userdeid
-#     userid = userdeid
-#     userid = 3
-#     jsons = request.get_json()
-#     deteil_table_insuranceid = jsons['iid']
-#     description = jsons['description']
-#
-#     localtime = time.asctime(time.localtime(time.time()))
-#     me = claim(insuranceid=deteil_table_insuranceid,description=description,userid = userid,date=localtime,
-#                state = 'Processing')
-#
-#     db.session.add(me)
-#     db.session.commit()
-#
-#     d = claim.query.filter(claim.insuranceid == deteil_table_insuranceid,claim.description==description).all()
-#
-#     data = {
-#         "id": d[0].id
-#     }
-#     jstr = json.dumps(data)
-#     print(type(jstr))
-#     return jstr
+@app.route('/order',methods = ['GET','POST'])
+def order():
+    global userdeid
+    # userid = userdeid
+    # userid = 3
+    jsons = request.get_json()
+    userid = jsons['uid']
+    deteil_table_insuranceid = jsons['iid']
+    description = jsons['description']
+
+    localtime = time.asctime(time.localtime(time.time()))
+    me = claim(insuranceid=deteil_table_insuranceid,description=description,userid = userid,date=localtime,
+               state = 'Processing')
+
+    db.session.add(me)
+    db.session.commit()
+
+    d = claim.query.filter(claim.insuranceid == deteil_table_insuranceid,claim.description==description).all()
+
+    data = {
+        "id": d[0].id
+    }
+    jstr = json.dumps(data)
+    print(type(jstr))
+    return jstr
 
 
 @app.route('/insurance_m',methods = ['GET','POST'])
@@ -636,14 +655,72 @@ def login_app():
             userdeid = a[0].userid
 
             data = {
-                'userid': a[0].userid,
+                'userid': a[0].userid
             }
             jstr = json.dumps(data)
 
             return jstr
         else:
             data = {
-                'userid': '-1',
+                'userid': '-1'
             }
             jstr = json.dumps(data)
             return jstr
+
+
+
+
+
+@app.route('/check_des',methods = ['GET','POST'])
+def check_des():
+    msg = request.get_json()
+    name = msg['name']
+    a = description.query.filter(description.name == name).all()
+    if len(a)!=0:
+        descript = a[0].description
+        data = {
+            'description': descript
+        }
+        jstr = json.dumps(data)
+        return jstr
+    else:
+        data = {
+            'description': "Sorry, we don't have this kind of insurance."
+        }
+        jstr = json.dumps(data)
+        return jstr
+
+@app.route('/profile',methods = ['POST'])
+def profile():
+
+
+    userid = session['userdeid']
+
+    a = user.query.filter(user.userid == userid).all()
+    if len(a)!=0:
+        username = a[0].username
+        email = a[0].email
+        birthday = a[0].birthday
+        gender =  a[0].gender
+        telephone =  a[0].telephone
+        data = {
+            'username' : username,
+            'email' : email,
+            'birthday' : birthday,
+            'gender': gender,
+            'telephone' : telephone
+        }
+        jstr = json.dumps(data)
+        print(jstr)
+
+        return jstr
+    else:
+        data = {
+            'username':'',
+            'email':'',
+            'birthday': '',
+            'gender': '',
+            'telephone': ''
+        }
+        jstr = json.dumps(data)
+        return jstr

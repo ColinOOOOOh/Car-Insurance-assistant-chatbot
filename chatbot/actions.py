@@ -11,11 +11,17 @@ class ActionQueryInsurance(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
-        r = requests.post('http://3.15.234.46:5000/chat_bot', json={"sender": "chatbot", "message": "query_insurance", "attribute": "-"})
-        for k, v in r.json().items():
-                print(k, ' k', v, 'v')
-
-        #dispatcher.utter_message(r)
+        r = requests.post('http://3.15.234.46:5000/chat_bot', json={"message": "query_insurance", "attribute": "-"})
+        return_str = "You may be interested in the following: *"
+        ret_str = r.json()['car_insurance']
+        ret_list = []
+        for i in range(len(ret_str)):
+            if ret_str[i]['name'] in ret_list:
+                continue
+            else:
+                ret_list.append(ret_str[i]['name'])
+                return_str += str(ret_str[i]['name']) +'*'
+        dispatcher.utter_message(return_str)
         return []
 
 class ActionQueryInsuranceWithPrice(Action):
@@ -27,27 +33,34 @@ class ActionQueryInsuranceWithPrice(Action):
             domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
         price_range = tracker.get_slot("price_range")
         print(price_range,' price_range')
-        r = requests.post('http://3.15.234.46:5000/chat_bot', json={"sender": "chatbot", "message": "query_insurance_with_price","attribute": "cheap"})
-        for k, v in r.json().items():
-            print(k, ' k', v, 'v')
-
-
-        dispatcher.utter_message("We heve : 1. glass insurance ")
+        r = requests.post('http://3.15.234.46:5000/chat_bot', json={ "message": "query_insurance_with_price","attribute": price_range})
+        return_str = "We have :*"
+        ret_str = r.json()['car_insurance']
+        ret_list = []
+        for i in range(len(ret_str)):
+            if ret_str[i]['name'] in ret_list:
+                continue
+            else:
+                ret_list.append(ret_str[i]['name'])
+                return_str += str(ret_str[i]['name']) +'*'
+        dispatcher.utter_message(return_str)
         return []
 
 class ActionQueryInsuranceWithName(Action):
     def name(self) -> Text:
-         return "action_query_insurance_with_price"
+         return "action_query_insurance_with_name"
 
     def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
-         name = tracker.get_slot("name")
-         print("name: ", name)
-         r = requests.post('http://3.15.234.46:5000/query_with_name', json={"name": name})
+         name = tracker.get_slot("car_insurance")
+         print("car_insurance: ", name)
+         r = requests.post('http://3.15.234.46:5000/chat_bot', json={"message": "query_insurance_with_name", "attribute": name})
+         return_str = ""
+         print(r.json())
          for k, v in r.json().items():
-             print(k, ' k', v, 'v')
-         dispatcher.utter_message("name")
+             return_str += str(v[0]['description']) 
+         dispatcher.utter_message(return_str)
          return []
 
 class ActionBuyInsurance(Action):
@@ -57,13 +70,13 @@ class ActionBuyInsurance(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
-        name = tracker.get_slot("name")
+        name = tracker.get_slot("car_insurance")
         coverage = tracker.get_slot("coverage")
         duration = tracker.get_slot("duration")
         uid = tracker.get_slot("uid")
         print(uid, "uid",  name, ' name', coverage, 'coverage', duration, ' duration')
         r = requests.post('http://3.15.234.46:5000/buy_ins', json={"uid": uid, "name": name, "coverage": coverage,"duration": duration})
-        return_str = "Order success! You insurance id is : "
+        return_str = "Order success! *You insurance id is : "
         for k, v in r.json().items():
             return_str += str(v)
         dispatcher.utter_message(return_str)
@@ -76,11 +89,11 @@ class ActionShowOrder(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
-        name = tracker.get_slot("name")
+        name = tracker.get_slot("car_insurance")
         coverage = tracker.get_slot("coverage")
         duration = tracker.get_slot("duration")
         r = requests.post('http://3.15.234.46:5000/get_price', json={"name": name, "coverage": coverage,"duration": duration})
-        return_str =  'Here is your order:       insurance name: ' + str(name) +  '\n coverage: ' + str(coverage) + '\n duration: ' + str(duration)
+        return_str =  'Here is your order:*       insurance name: ' + str(name) +  '* coverage: ' + str(coverage) + '* duration: ' + str(duration)
         for k, v in r.json().items():
             
             if str(v) == 'none':
@@ -89,8 +102,8 @@ class ActionShowOrder(Action):
                 return_str += " "
                 return_str += str(k)
                 return_str += ": "
-                return_str += str(v)
-                return_str += "\n  To confirm your order, say yes. To cancel, please say no."
+                return_str += str(v) + " dollars *"
+                return_str += "To confirm your order, say yes. To cancel, please say no."
         print(return_str)
         dispatcher.utter_message(return_str)
         return []
@@ -102,10 +115,12 @@ class ActionMakeClaim(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
-        iid = tracker.get_slot("iid")
+        iid_tmp = tracker.get_slot("iid")
+        _, iid = iid_tmp.split(" ")
+        uid = tracker.get_slot("uid")
         description = tracker.get_slot("description")
-        r = requests.post('http://3.15.234.46:5000/order', json={"iid": iid, "description": description})
-        return_str = "We received your claim. Thank you.        Your claim tracking id is:    "       
+        r = requests.post('http://3.15.234.46:5000/order', json={"iid": iid, "uid": uid, "description": description})
+        return_str = "We received your claim. Thank you. * Your claim tracking id is:    "       
         for k, v in r.json().items():
             return_str += str(v)
         dispatcher.utter_message(return_str)
@@ -120,3 +135,4 @@ class ActionSetUid(Action):
         _, uid1 = uid.split(" ")
         print(uid1)
         return [SlotSet("uid", uid1)]
+

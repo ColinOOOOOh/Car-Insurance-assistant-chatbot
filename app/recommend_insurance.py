@@ -1,5 +1,5 @@
 from typing import List
-from kb import KnowledgeBase
+from app.kb import KnowledgeBase
 
 class Insurance:
     def __init__(self, 

@@ -8,32 +8,29 @@
 </head>
 <body>
     <div id="login_frame" ng-app="loginApp" ng-controller="login_controller">
-        <b>Chatbot</b><br>
+        <b id="title">Chatbot</b><br>
         <form method="post" action="/login">
-
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tbody>
                     <tr>
                         <table>
                             <tbody>
                             <tr>
-                                <th width="267" align="right">UserID:</th>
-                                <td colspan="2" align="left"><input type="text" ng-model="username" id="username" name="username" style="margin-left: 10px"/></td>
+                                <th width="267" align="right">User Name:</th>
+                                <td colspan="2" align="left"><input type="text" ng-model="username" id="username" name="User" class="input"/></td>
                             </tr>
                             <tr>
                                 <th width="267" align="right">Password:</th>
-                                <td colspan="2" align="left"><input type="password" ng-model="password" id="password" name="password" style="margin-left: 10px"/></td>
+                                <td colspan="2" align="left"><input type="password" ng-model="password" id="password" name="password" class="input"/></td>
                             </tr>
                             </tbody>
                         </table>
                     </tr>
                     <tr>
                         <td align="center">
-
-                            <input type="submit" width="100%" value="Login" name="Submit"/>
-
-                            <input type="button" width="100%" onclick='location.href=("register")' value="Register"/>
-                            <input type="button" width="100%" ng-click="reset()" value="Reset"/>
+                            <input type="submit" width="100%" value="Login" class="button white"/>
+                            <input type="button" width="100%" onclick='location.href=("register")' value="Register" class="button white"/>
+                            <input type="button" width="100%" ng-click="reset()" value="Reset" class="button white"/>
                         </td>
                     </tr>
                 </tbody>
@@ -45,5 +42,3 @@
 </script>
 </html>
 
-
-<!--onclick="jumpToRegister()"-->

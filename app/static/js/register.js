@@ -2,14 +2,16 @@ var flag1 = true;
 var flag2 = true;
 var flag3 = true;
 var flag4 = true;
+//var age = 0;
 
 angular.module('register', [])
     .controller('register_controller', function ($scope, $http) {
     //Username is valid or not.
     $scope.username_exist = function(){
+        var username = $scope.username;
         $http({
             method: 'GET',
-            url: 'username_exist'
+            url: 'username_exist?username=' +　username
         }).then(function (response) {
             var res_data = response.data.result;
             var username_check = document.getElementById('valid_username');
@@ -25,9 +27,10 @@ angular.module('register', [])
 
     //Email format is valid or not.
     $scope.email_valid = function(){
+        var email = $scope.email;
         $http({
             method: 'GET',
-            url: 'email_exit'
+            url: 'email_exit?email=' + email
         }).then(function (response) {
             var res_data = response.data.result;
             var email_check = document.getElementById('valid_email');
@@ -43,9 +46,10 @@ angular.module('register', [])
 
     //Mobile number is valid or not.
     $scope.mobilenumber_valid = function(){
+        var mobilenumber = $scope.mobilenumber;
         $http({
             method: 'GET',
-            url: 'mobilenumber_exit'
+            url: 'check_telephone_number?mobile_number='+mobilenumber
         }).then(function (response) {
             var res_data = response.data.result;
             var mobilenumber_check = document.getElementById('valid_mobilenumber');
@@ -64,7 +68,7 @@ angular.module('register', [])
         var one_pass = $scope.password;
         var two_pass = $scope.confirm;
         var pass_block = document.getElementById('consistency');
-        if(one_pass != two_pass){
+        if(one_pass != null && one_pass != two_pass){
             pass_block.style.display = "block";
             flag4 = false;
         }else{
@@ -73,8 +77,23 @@ angular.module('register', [])
         }
     };
 
+    //Calculate Age.
+    $scope.calculateAge = function(){
+        var birth = $scope.birthday;
+        var birthDayTime = new Date(birth).getTime();
+        var nowTime = new Date().getTime();
+        var age = Math.ceil((nowTime-birthDayTime)/31536000000);
+
+        document.getElementsByName("age").val = age;
+
+        $scope.age = age;
+        document.getElementById("age").value = age;
+
+    };
+
     //Register function
     $scope.register = function(){
+        var gender = $scope.gender;
         var register_valid_block = document.getElementById('register_valid_div');
         if(!flag1 || !flag2 || !flag3 || !flag4){
             register_valid_block.style.display = "block";
@@ -94,6 +113,9 @@ angular.module('register', [])
       $scope.birthday = "";
       $scope.password = "";
       $scope.confirm = "";
+      $scope.occupation = "";
+      $scope.car_model = "";
+      $scope.previous_accidents = "";
     };
 
     $scope.return = function () {

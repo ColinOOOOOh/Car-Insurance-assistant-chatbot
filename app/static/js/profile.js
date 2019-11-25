@@ -2,29 +2,34 @@ var flag1 = true;
 var flag2 = true;
 
 angular.module('profile', [])
-    .controller('profile_controller', function ($scope, $http){
-    $scope.change_icon = function () {
-        document.getElementById('icon').style.display = "none";
-        document.getElementById('make').style.display = "block";
-        document.getElementById('icon_frame').style.display = "block";
-    };
+    .controller('profile_controller', function ($scope, $http, $window){
 
-    //Change icon.
-    $scope.change = function () {
-        var icon = document.getElementById('icon');
-        alert(document.getElementById('icon_frame').value);
-        icon.src = document.getElementById('icon_frame').value;
-        document.getElementById('icon').style.display = "block";
-        document.getElementById('make').style.display = "none";
-        document.getElementById('icon_frame').style.display = "none";
-
-    };
+    //Initializing
+    $window.onload = function(){
+        $http({
+            method: 'POST',
+            url: 'profile'
+        }).then(function (response) {
+            $scope.username = response.data.username;
+            $scope.email = response.data.email;
+            var str = response.data.birthday.replace(/-/g, "/");
+            var date = new Date(str)
+            $scope.birthday = date;
+            $scope.mobilenumber = response.data.telephone;
+            var sex = response.data.gender;
+            if(sex == "1"){
+                $scope.gender = "1";
+            }else{
+                $scope.gender = "2"
+            }
+        });
+     };
 
     //Email format is valid or not.
     $scope.email_valid = function(){
         $http({
             method: 'GET',
-            url: 'https://ac785e2a-c9be-488e-aee3-aa2cb088bf8a.mock.pstmn.io/email_valid'
+            url: 'email_exit?email='+email
         }).then(function (response) {
             var res_data = response.data.result;
             var email_check = document.getElementById('valid_email');
@@ -42,7 +47,7 @@ angular.module('profile', [])
     $scope.mobilenumber_valid = function(){
         $http({
             method: 'GET',
-            url: 'https://e9da2167-a5c2-4a83-9982-614edcd65d99.mock.pstmn.io/mobilenumber_valid'
+            url: 'check_telephone_number?mobile_number='+mobilenumber
         }).then(function (response) {
             var res_data = response.data.result;
             var mobilenumber_check = document.getElementById('valid_mobilenumber');
