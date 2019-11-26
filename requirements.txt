@@ -2,3 +2,10 @@ kubernetes
 request
 flask
 flask_wtf
+datetime
+requests
+flask_sqlalchemy
+wtforms
+keras
+rasa-sdk
+
