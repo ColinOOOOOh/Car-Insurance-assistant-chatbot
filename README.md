@@ -6,12 +6,12 @@ Prepareing environments:
 2. Install Mysql (if not), import data using:  mysql -u username -p public < wantedsqlfile.sql
 
 Start the program:
-1. rasa run -m models
+1. python3 myproj.py
 2. Open a new terminatal or run the program above on background
 3. cd chatbot/
 4. rasa run actions
 5. Open a new terminatal or run the program above on background
-6. python3 myproj.py
+6. rasa run -m models
 7. Please wait 30s to make sure everything is ready
 8. Visit http://0.0.0.0:5000/login (if running locally)
 
